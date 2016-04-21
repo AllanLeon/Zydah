@@ -1,3 +1,3 @@
-#Zydah ###by SEKx
+#*Zydah* by SEKx
 ####Video streaming app
 Proyecto de certificación 3
