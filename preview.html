@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zydah</title>
+</head>
+<body>
+<section id="search">
+	<form autocomplete="on">
+		<div id="filters">
+			<input type="checkbox" name="genre" value="Action">Action<br>
+			<input type="checkbox" name="genre" value="Comedy">Comedy<br>
+			<input type="checkbox" name="genre" value="Drama">Drama<br>
+			<input type="checkbox" name="genre" value="Fantasy">Fantasy<br>
+			<input type="checkbox" name="genre" value="Horror">Horror<br>
+			<input type="checkbox" name="genre" value="Romance">Romance<br>
+		</div>
+		<input type="button" value="Filters">
+		<input type="search" placeholder="Search..." name="searchquery">
+		<input type="submit" value="Search">
+	</form>
+</section>
+<section id="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Rki0-UztA7I" frameborder="0" allowfullscreen></iframe>
+	<h2>Title</h2><br>
+	<h4>Description</h4><br>
+	<input type="button" name="plus" value="^">
+	<h3>Rating</h3>
+	<input type="button" name="minus" value="v">
+	<h5>Tags</h5>
+</section>
+<section id="comments">
+	<article> <!-- Set of articles?-->
+		<figure>
+			<img src="images/user_circle.png" />
+		</figure>
+		<h1>Name</h1>
+		<textarea></textarea>
+		<input type="button" value="Comment">
+	</article>
+</section>
+<section id="usr_data">
+	<article>
+		<figure>
+			<img src="images/user_circle.png" />
+		</figure><h1>Name</h1><input type="button" value="Log Out">
+	</article>
+</section>
+</body>
+</html>
