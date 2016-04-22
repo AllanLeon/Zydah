@@ -2,17 +2,35 @@
 <html>
 <head>
 	<title>Zydah</title>
+	<link rel="stylesheet" type="text/css" href="styles/register.css">
 </head>
 <body>
 <section id="register">
 	<form autocomplete="on">
-		<input type="text" placeholder="First Name" name="usr_first_name"><br>
-		<input type="text" placeholder="Last Name" name="usr_last_name"><br>
-		<input type="email" placeholder="Email" name="usr_email"><br>
-		<input type="password" placeholder="Password" name="usr_password"><br>
-		<input type="password" placeholder="Password" name="usr_password_rep"><br>
-		<input type="file" name="usr_img" accept=".png,.jpg,.jpeg,.gif,.bmp"><br>
-		<input type="submit" value="Register"><br>
+		<div class="reg_big">
+			<div class="reg_small">
+				<input type="text" placeholder="First Name" name="usr_first_name">
+			</div>
+			<div class="reg_small">
+				<input type="text" placeholder="Last Name" name="usr_last_name"><br>
+			</div>
+		</div>
+		<div class="reg_big">
+			<input type="email" placeholder="Email" name="usr_email"><br>
+		</div>
+		<div class="reg_big">
+			<input type="password" placeholder="Password" name="usr_password"><br>
+		</div>
+		<div class="reg_big">
+			<input type="password" placeholder="Repeat password" name="usr_password_rep"><br>
+		</div>
+		<div class="reg_upload">
+			<input type="file" name="usr_img" accept="image/*" class="upload"><br>
+			<span class="upload_bttn">Upload photo</span>
+		</div>
+		<div class="reg_bttn">
+			<input type="submit" value="Register">
+		</div>
 	</form>
 </section>
 </body>
