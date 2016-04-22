@@ -1,0 +1,163 @@
+#search {
+	width: 100%;
+	position: fixed;
+	height: 35px;
+	margin-top: -37px;
+	background-color: white;
+	border-bottom: 2px solid #000000;
+	z-index: 999;
+}
+
+#search figure {
+	margin: 0 auto;
+	float: left;
+	width: 130px;
+	margin: 0px;
+}
+
+#search div {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#search img {
+	height: 35px;
+}
+
+#search_form {
+	margin: 0 auto;
+	width: 550px;
+	padding-top: 5px;
+}
+
+#filters {
+	position: absolute;
+    top: 30px;
+    margin: 0 auto;
+    width: 100px;
+    height: 120px;
+    border: 3px solid #000000;
+    background-color: rgba(255, 255, 255, 0.6);
+    font: 16px "Roboto";
+    z-index: 999;
+    display: none;
+}
+
+#search_box {
+	width: 300px;
+}
+
+#video {
+	margin-top: 37px;
+	width: 100%;
+	/*background-color: blue;*/
+}
+
+video {
+	max-width: 800px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+    margin: 0 auto;
+}
+
+.video_info {
+	max-width: 800px;
+	width: 100%;
+	height: 200px;
+	display: block;
+    margin: 0 auto;
+}
+
+.video_text {
+	width: 80%;
+	float: left;
+	height: 100%;
+	/*background-color: red;*/
+}
+
+.video_rating {
+	margin-left: 80%;
+	width: 20%;
+	/*background-color: green;*/
+}
+
+.video_text h2 {
+    margin: 0;
+    font: bold 40px "Roboto";
+}
+
+.video_text h4 {
+    margin: 0;
+    font: 22px "Roboto";
+}
+
+.video_text h5 {
+    margin: 0;
+    font: 12px "Roboto";
+}
+
+.video_rating h3 {
+    margin: 0;
+    font: bold 22px "Roboto";
+    text-align: center;
+}
+
+.video_rating input {
+	margin: 0 auto;
+	display: block;
+}
+
+#comments {
+	max-width: 800px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+#comments h1 {
+	margin: 0;
+    font: bold 28px "Roboto";
+}
+
+#comments h3 {
+	font: bold 18px "Roboto";
+	margin: 0;
+	padding: 0;
+}
+
+#comments textarea {
+	font: 14px "Roboto";
+}
+
+.comment {
+	width: 100%;
+	/*background-color: green;*/
+}
+
+.comment .usr_img {
+	width: 70px;
+	height: 100px;
+	float: left;
+	/*background-color: red;*/
+}
+
+.comment .usr_img img {
+	width: 70px;
+}
+
+.comment .usr_img figure {
+	margin: 0;
+}
+
+.comment .usr_text {
+	height: 100px;
+}
+
+.comment .usr_text textarea {
+	width: 60%;
+}
+

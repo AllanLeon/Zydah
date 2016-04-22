@@ -2,10 +2,15 @@
 <html>
 <head>
 	<title>Zydah</title>
+	<link rel="stylesheet" type="text/css" href="styles/preview.css">
 </head>
 <body>
 <section id="search">
-	<form autocomplete="on">
+	<div>
+	<figure>
+		<img src="images/zydah_small_red.png" />
+	</figure>
+	<form autocomplete="on" id="search_form">
 		<div id="filters">
 			<input type="checkbox" name="genre" value="Action">Action<br>
 			<input type="checkbox" name="genre" value="Comedy">Comedy<br>
@@ -15,29 +20,44 @@
 			<input type="checkbox" name="genre" value="Romance">Romance<br>
 		</div>
 		<input type="button" value="Filters">
-		<input type="search" placeholder="Search..." name="searchquery">
+		<input type="search" placeholder="Search..." name="searchquery" id="search_box">
 		<input type="submit" value="Search">
 	</form>
+	</div>
 </section>
 <section id="video">
-	<video width="640" height="480" controls>
+	<video controls>
 		 <source src="videos/love.mp4" type="video/mp4">
 		 Your browser does not support the video tag.
 	</video>
-	<h2>Title</h2><br>
-	<h4>Description</h4><br>
-	<input type="button" name="plus" value="^">
-	<h3>Rating</h3>
-	<input type="button" name="minus" value="v">
-	<h5>Tags</h5>
+	<div class="video_info">
+		<div class="video_text">
+			<h2>Title</h2><br>
+			<h4>Description</h4><br>
+			<h5>Tags</h5>
+		</div>
+		<div class="video_rating">
+			<input type="button" name="plus" value="^">
+			<h3>Rating</h3>
+			<input type="button" name="minus" value="v">
+		</div>
+	</div>
 </section>
+<hr>
 <section id="comments">
+	<header><h1>Comentarios</h1></header>
 	<article> <!-- Set of articles?-->
-		<figure>
-			<img src="images/user_circle.png" />
-		</figure>
-		<h1>Name</h1>
-		<textarea></textarea>
+		<div class="comment">
+			<div class="usr_img">
+				<figure>
+					<img src="images/user_circle.png" />
+				</figure>
+			</div>
+			<div class="usr_text">
+				<h3>Name</h3>
+				<textarea readonly></textarea><br>
+			</div>
+		</div>
 		<input type="button" value="Comment">
 	</article>
 </section>
