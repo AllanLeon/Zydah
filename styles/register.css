@@ -52,6 +52,11 @@
 	height: 100%;
 	width: 100%;
 	font: 18px "Roboto";
+	background-color: #a2a2a2;
+}
+
+.reg_bttn input:hover {
+	background-color: #ffffff;
 }
 
 /*.reg_upload {
@@ -103,6 +108,7 @@
     display:inline-block;
     vertical-align:top;
 }
+
 .upload_bttn {
     display:inline-block;
     vertical-align:top;
@@ -117,6 +123,10 @@
     width: 100%;
     line-height:35px;
     color:#fff;
+}
+
+.upload_bttn:hover {
+    background:rgba(0,0,0,0.2);
 }
 
 .reg_upload input.upload {

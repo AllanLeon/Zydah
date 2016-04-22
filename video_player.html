@@ -10,7 +10,7 @@
 	<figure>
 		<img src="images/zydah_small_red.png" />
 	</figure>
-	<form autocomplete="on" id="search_form">
+	<div id="search_form">
 		<div id="filters">
 			<input type="checkbox" name="genre" value="Action">Action<br>
 			<input type="checkbox" name="genre" value="Comedy">Comedy<br>
@@ -19,10 +19,10 @@
 			<input type="checkbox" name="genre" value="Horror">Horror<br>
 			<input type="checkbox" name="genre" value="Romance">Romance<br>
 		</div>
-		<input type="button" value="Filters">
+		<input type="button" value="Filters" class="filters_bttn">
 		<input type="search" placeholder="Search..." name="searchquery" id="search_box">
-		<input type="submit" value="Search">
-	</form>
+		<input type="image" src="images/search_icon.png" alt="Search" class="search_bttn">
+	</div>
 	</div>
 </section>
 <section id="video">
@@ -58,7 +58,7 @@
 				<textarea readonly></textarea><br>
 			</div>
 		</div>
-		<input type="button" value="Comment">
+		<input type="button" value="Comment" class="comment_bttn">
 	</article>
 </section>
 </body>
