@@ -7,10 +7,11 @@
 <section id="logo">
 	<figure>
 		<img src="images/zydah_red.png" />
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
 	</figure>
 </section>
 <section id="search">
-	<form autocomplete="on">
+	<div id="search_form">
 		<div id="filters">
 			<input type="checkbox" name="genre" value="Action">Action<br>
 			<input type="checkbox" name="genre" value="Comedy">Comedy<br>
@@ -19,16 +20,81 @@
 			<input type="checkbox" name="genre" value="Horror">Horror<br>
 			<input type="checkbox" name="genre" value="Romance">Romance<br>
 		</div>
-		<input type="button" value="Filters">
-		<input type="search" placeholder="Search..." name="searchquery">
-		<input type="submit" value="Search">
-	</form>
+		<input type="button" value="Filters" class="filters_bttn">
+		<input type="search" placeholder="Search..." name="searchquery" id="search_box">
+		<input type="image" src="images/search_icon.png" alt="Search" class="search_bttn">
+	</div>
 </section>
 <section id="videos">
-	<article class="video_thumbnail" style="background-image: url('images/video_thumbnail.jpg')">
-		<h3>Title</h3><br>
-		<h4>Duration</h4><br>
-		<h5>Rating</h5><h5>Tags</h5>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
+	</article>
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">Title</h3><br>
+			<h4 class="video_duration">Duration</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">Rating</h5>
+			<h5 class="video_tags">Tags</h5>
+		</div>
 	</article>
 </section>
 </body>
