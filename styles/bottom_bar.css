@@ -4,28 +4,72 @@ img {
 	top: 0;
 }
 
-form {
+#login form {
 	width: 100%;
 	min-height: 40px;
 	position: fixed;
 	bottom: 0;
-	background-color: #90c7be;
+	/*background-color: #90c7be;*/
+	background-color: #212121;
 	margin-left: -8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-form .text {
+#login form .text {
+	position: relative;
+	/*top: 100%;*/
+	transform: translateY(15%);
+	margin-left: 20px;
+	border-radius: 5px;
+	border: 1px solid #404040;
+	font: 16px "Roboto";
+	padding: 5px;
+}
+
+#login form .login_button {
+	position: relative;
+	top: 50%;
+	transform: translateY(15%);
+	margin-left: 20px;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+	font: bold 14px "Roboto";
+	color: #212121;
+	padding: 5px;
+	width: 100px;
+	background-color: #B6B6B6;
+	/*float: right;
 	position: relative;
 	top: 50%;
 	transform: translateY(50%);
-	margin-left: 20px;
+	margin-right: 20px;*/
 }
 
-form .button {
+#login form .login_button:hover {
+	background-color: #727272;
+	color: #ffffff;
+}
+
+#login form .register_button {
 	float: right;
 	position: relative;
 	top: 50%;
-	transform: translateY(50%);
+	transform: translateY(15%);
 	margin-right: 20px;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+	font: bold 14px "Roboto";
+	color: #ffffff;
+	padding: 5px;
+	width: 100px;
+	background-color: #E91E63;
+	/*box-shadow: 2px 2px 5px black;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login form .register_button:hover {
+	background-color: #C2185B;
+	color: #ffffff;
 }
 
 #usr_data {
@@ -34,6 +78,7 @@ form .button {
 	top: 0;
 	background: linear-gradient(to right,#00e1b9, #00b26f); 
 	margin-left: -8px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #usr_data .text {
@@ -43,12 +88,26 @@ form .button {
 	transform: translateY(50%);
 	margin-left: 10px;
 	margin-top: 0px;
+	font: bold 19px "Roboto";
+	color: #ffffff;
 }
 
 #usr_data .button {
 	float: right;
 	position: relative;
 	top: 50%;
-	transform: translateY(50%);
+	transform: translateY(15%);
 	margin-right: 20px;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+	font: bold 14px "Roboto";
+	color: #00b26f;
+	padding: 5px;
+	width: 100px;
+	background-color: #FFFFFF;
+}
+
+#usr_data .button:hover {
+	background-color: #00b26f;
+	color: #ffffff;
 }
