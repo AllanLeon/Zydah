@@ -1,3 +1,7 @@
+body {
+	background: url(../images/bkgrnd.png);
+}
+
 #logo {
 	width: 700px;
 	margin: 0 auto;
@@ -125,7 +129,7 @@
 .video_bottom_info {
 	width: 100%;
 	height: 20px;
-	background-color: red;
+	background-color: #00b26f;
 	position: relative;
 }
 
