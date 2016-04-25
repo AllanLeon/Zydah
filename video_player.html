@@ -2,13 +2,15 @@
 <html>
 <head>
 	<title>Zydah</title>
-	<link rel="stylesheet" type="text/css" href="styles/video_player.css">
+	<link rel="icon" type="image/ico" href="images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="styles/video_player.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/bottom_bar.css"/>
 </head>
 <body>
 <section id="search">
 	<div>
 	<figure>
-		<img src="images/zydah_small_red.png" />
+		<img src="images/zydah_small.png" />
 	</figure>
 	<div id="search_form">
 		<div id="filters">
@@ -60,6 +62,14 @@
 		</div>
 		<input type="button" value="Comment" class="comment_bttn">
 	</article>
+</section>
+<section id="login">
+	<form autocomplete="on">
+		<input class="text" type="email" placeholder="Email" name="usr_email">
+		<input class="text" type="password" placeholder="Password" name="usr_pwd">
+		<input class="login_button" type="submit" value="Login">
+		<input class="register_button" type="button" value="Register">
+	</form>
 </section>
 </body>
 </html>
