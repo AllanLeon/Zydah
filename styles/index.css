@@ -1,0 +1,143 @@
+#logo {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#logo figure {
+	width: 500px;
+	margin: 0 auto;
+}
+
+#logo img {
+	width: 100%;
+}
+
+#search {
+	width: 100%;
+}
+
+#search_form {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 700px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+#filters {
+	position: absolute;
+    top: 30px;
+    margin: 0 auto;
+    width: 100px;
+    height: 120px;
+    border: 3px solid #000000;
+    background-color: rgba(255, 255, 255, 0.6);
+    font: 16px "Roboto";
+    z-index: 999;
+    display: none;
+}
+
+#search_box {
+	width: 540px;
+	height: 80%;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	vertical-align: middle;
+	margin-top: 3px;
+	font: 25px "Roboto";
+ }
+
+#video {
+	margin-top: 37px;
+	width: 100%;
+	/*background-color: blue;*/
+}
+
+.filters_bttn {
+	border-radius: 10px;
+	background-color: #ffffff;
+	border: 3px solid #a2a2a2;
+	height: 80%;
+	width: 100px;
+	font: bold 20px "Roboto";
+	line-height: 80%;
+	margin-left: 5px;
+	vertical-align: bottom;
+}
+
+.filters_bttn:hover {
+	background-color: #a2a2a2;
+}
+
+.search_bttn {
+	height: 60%;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.search_bttn:hover {
+	height: 70%;
+}
+
+#videos {
+	width: 90%;
+	min-width: 700px;
+	/*background-color: green;*/
+	margin: 0 auto;
+	margin-top: 20px;
+	display: table;
+}
+
+.video_info {
+	/*background-color: green;*/
+	margin: 1%;
+	width: 18%;
+	float: left;
+	display: table-cell;
+}
+
+.video_thumbnail {
+	background-image: url("../images/video_thumbnail.jpg");
+	width: 100%;
+	height: 126px;
+	/*background-color: blue;*/
+	position: relative;
+}
+
+.video_thumbnail .video_title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	font: bold 20px "Roboto";
+}
+
+.video_thumbnail .video_duration {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	font: 18px "Roboto";
+}
+
+.video_bottom_info {
+	width: 100%;
+	height: 20px;
+	background-color: red;
+	position: relative;
+}
+
+.video_bottom_info .video_rating {
+	position: absolute;
+	left: 0;
+	margin: 0;
+	font: bold 16px "Roboto";
+}
+
+.video_bottom_info .video_tags {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	font: 12px "Roboto";
+}
