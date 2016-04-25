@@ -1,0 +1,54 @@
+img {
+	width: 40px;
+	position: absolute;
+	top: 0;
+}
+
+form {
+	width: 100%;
+	min-height: 40px;
+	position: fixed;
+	bottom: 0;
+	background-color: #90c7be;
+	margin-left: -8px;
+}
+
+form .text {
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+	margin-left: 20px;
+}
+
+form .button {
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+	margin-right: 20px;
+}
+
+#usr_data {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background: linear-gradient(to right,#00e1b9, #00b26f); 
+	margin-left: -8px;
+}
+
+#usr_data .text {
+	float: left;
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
+#usr_data .button {
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
+	margin-right: 20px;
+}

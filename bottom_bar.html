@@ -2,23 +2,24 @@
 <html>
 <head>
 	<title>Zydah</title>
+	<link rel="stylesheet" type="text/css" href="styles/bottom_bar.css">
 </head>
 <body>
 <section id="login">
 	<form autocomplete="on">
-		<input type="email" placeholder="Email" name="usr_email">
-		<input type="password" placeholder="Password" name="usr_pwd">
-		<input type="submit" value="Login">
-		<input type="button" value="Register">
+		<input class="text" type="email" placeholder="Email" name="usr_email">
+		<input class="text" type="password" placeholder="Password" name="usr_pwd">
+		<input class="button" type="submit" value="Login">
+		<input class="button" type="button" value="Register">
 	</form>
 </section>
 <section id="usr_data">
 	<article>
-		<figure>
+		<figure class="text">
 			<img src="images/user_circle.png" />
 		</figure>
-		<h1>Name</h1>
-		<input type="button" value="Log Out">
+		<h1 class="text">Name</h1>
+		<input class="button" type="button" value="Log Out">
 	</article>
 </section>
 </body>
