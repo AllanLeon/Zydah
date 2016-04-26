@@ -13,24 +13,47 @@
 	position: relative;
 	/*top: 100%;*/
 	transform: translateY(15%);
-	margin-left: 20px;
+	margin-left: 30px;
 	border-radius: 5px;
 	border: 1px solid #404040;
-	font: 16px "Roboto";
+	font: 14px "Roboto";
 	padding: 5px;
+	width: 30%;
 }
 
-#login form .login_button {
+#register_button {
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translateY(15%);
+	margin-right: 20px;
+	border-radius: 10px;
+	border: 3px solid #FFFFFF;
+	font: bold 14px "Roboto";
+	color: #FFFFFF;
+	padding: 5px;
+	width: 140px;
+	background-color: #00B26F;
+	/*box-shadow: 2px 2px 5px black;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#register_button:hover {
+	background-color: #FFFFFF;
+	color: #00B26F;
+}
+
+#login_button {
 	position: relative;
 	top: 50%;
 	transform: translateY(15%);
 	margin-left: 20px;
 	border-radius: 10px;
-	border: 1px solid #ffffff;
+	border: 3px solid #FFFFFF;
 	font: bold 14px "Roboto";
 	color: #212121;
 	padding: 5px;
-	width: 100px;
+	width: 140px;
 	background-color: #B6B6B6;
 	/*float: right;
 	position: relative;
@@ -39,38 +62,16 @@
 	margin-right: 20px;*/
 }
 
-#login form .login_button:hover {
-	background-color: #727272;
-	color: #ffffff;
-}
-
-#login form .register_button {
-	float: right;
-	position: relative;
-	top: 50%;
-	transform: translateY(15%);
-	margin-right: 20px;
-	border-radius: 10px;
-	border: 1px solid #ffffff;
-	font: bold 14px "Roboto";
-	color: #ffffff;
-	padding: 5px;
-	width: 100px;
-	background-color: #E91E63;
-	/*box-shadow: 2px 2px 5px black;*/
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#login form .register_button:hover {
-	background-color: #C2185B;
-	color: #ffffff;
+#login_button:hover {
+	background-color: #212121;
+	color: #FFFFFF;
 }
 
 #usr_data {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	background: linear-gradient(to right,#00e1b9, #00b26f); 
+	background: linear-gradient(to right,#00E1B9, #00B26F); 
 	margin-left: -8px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -83,7 +84,7 @@
 	margin-left: 10px;
 	margin-top: 0px;
 	font: bold 19px "Roboto";
-	color: #ffffff;
+	color: #FFFFFF;
 }
 
 #usr_data .button {
@@ -93,17 +94,17 @@
 	transform: translateY(15%);
 	margin-right: 20px;
 	border-radius: 10px;
-	border: 3px solid #ffffff;
+	border: 3px solid #FFFFFF;
 	font: bold 14px "Roboto";
-	color: #00b26f;
+	color: #FFFFFF;
 	padding: 5px;
 	width: 100px;
-	background-color: #FFFFFF;
+	background-color: #00B26F;
 }
 
 #usr_data .button:hover {
-	background-color: #00b26f;
-	color: #ffffff;
+	background-color: #FFFFFF;
+	color: #00B26F;
 }
 
 #usr_data img {
