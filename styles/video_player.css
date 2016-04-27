@@ -1,3 +1,7 @@
+body {
+	background: url(../images/bkgrnd.png);
+}
+
 #search {
 	width: 100%;
 	position: fixed;

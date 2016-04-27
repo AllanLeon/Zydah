@@ -1,3 +1,7 @@
+body {
+	background: url(../images/bkgrnd.png);
+}
+
 #search {
 	width: 100%;
 	position: fixed;
@@ -85,6 +89,7 @@
 	margin: 0 auto;
 	margin-top: 40px;
 	display: table;
+	margin-bottom: 50px;
 }
 
 .video_info {
