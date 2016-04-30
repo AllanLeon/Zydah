@@ -25,7 +25,7 @@
 		</div>
 		<input type="button" value="Filters" class="filters_bttn">
 		<input type="search" placeholder="Search..." name="searchquery" id="search_box">
-		<input type="image" src="images/search_icon.png" alt="Search" class="search_bttn">
+		<input type="image" src="images/search_icon.png" alt="Search" class="search_bttn" id="search_btn">
 	</div>
 </section>
 <section id="videos">
@@ -171,5 +171,11 @@
 	</div>
 </section>
 <script type="text/javascript" src="scripts/bottom_bar.js"></script>
+<script type="text/javascript">
+	var search_btn = document.getElementById('search_btn');
+	search_btn.onclick = function() {
+		document.getElementById('tulbux').className ='tulbux';
+	}
+</script>
 </body>
 </html>
