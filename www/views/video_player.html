@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zydah by SEKs</title>
+	<link rel="icon" type="image/ico" href="../assets/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../styles/video_player.css"/>
+	<link rel="stylesheet" type="text/css" href="../styles/bottom_bar.css"/>
+</head>
+<body>
+<section id="search">
+	<div>
+	<figure>
+		<img src="../assets/images/zydah_small.png" />
+	</figure>
+	<div id="search_form">
+		<div id="filters">
+			<input type="checkbox" name="genre" value="Action">Action<br>
+			<input type="checkbox" name="genre" value="Comedy">Comedy<br>
+			<input type="checkbox" name="genre" value="Drama">Drama<br>
+			<input type="checkbox" name="genre" value="Fantasy">Fantasy<br>
+			<input type="checkbox" name="genre" value="Horror">Horror<br>
+			<input type="checkbox" name="genre" value="Romance">Romance<br>
+		</div>
+		<input type="button" value="Filters" class="filters_bttn">
+		<input type="search" placeholder="Search..." name="searchquery" id="search_box">
+		<input type="image" src="../assets/images/search_icon.png" alt="Search" class="search_bttn">
+	</div>
+	</div>
+</section>
+<section id="video">
+	<video controls>
+		 <source src="../assets/videos/love.mp4" type="video/mp4">
+		 Your browser does not support the video tag.
+	</video>
+	<div class="video_info">
+		<div class="video_text">
+			<h2>Title</h2><br>
+			<h4>Description</h4><br>
+			<h5>Tags</h5>
+		</div>
+		<div class="video_rating">
+			<input type="button" name="plus" value="^">
+			<h3>Rating</h3>
+			<input type="button" name="minus" value="v">
+		</div>
+	</div>
+</section>
+<hr>
+<section id="comments">
+	<header><h1>Comments</h1></header>
+	<article> <!-- Set of articles?-->
+		<div class="comment">
+			<div class="usr_img">
+				<figure>
+					<img src="../assets/images/user_circle.png" />
+				</figure>
+			</div>
+			<div class="usr_text">
+				<h3>Name</h3>
+				<textarea readonly></textarea><br>
+			</div>
+		</div>
+		<input type="button" value="Comment" class="comment_bttn">
+	</article>
+</section>
+<section id="usr_data">
+	<article>
+		<figure class="text">
+			<img src="../assets/images/user_circle.png" />
+		</figure>
+		<h1 class="text">Name</h1>
+		<input class="button" type="button" value="Log Out">
+	</article>
+</section>
+</body>
+</html>
