@@ -10,7 +10,7 @@ var save = document.getElementById("save_usr_data");
 var span = document.getElementsByClassName("close")[0];
 
 var user = {
-	name: "",
+	firstName: "",
 	lastName: "",
 	email: "",
 	password: "",
@@ -32,4 +32,25 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+function validateForm() {
+    var firstName = document.forms["register"]["usr_first_name"].value;
+    var lastName = document.forms["register"]["usr_last_name"].value;
+    var email = document.forms["register"]["usr_email"].value;
+    var password = document.forms["register"]["usr_password"].value;
+    var password_rep = document.forms["register"]["usr_password_rep"].value;
+    var photo = document.forms["register"]["usr_img"].value;
+
+    if (password === password_rep) {
+    	user.firstName = firstName;
+	    user.lastName = lastName;
+	    user.email = email;
+	    user.password = password;
+	    user.photo = photo;
+	    alert("User successfully registered!");
+    } else {
+    	alert("Mismatched passwords!");
+    }    
+    console.log(user);
 }
