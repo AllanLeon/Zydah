@@ -9,15 +9,15 @@ var save = document.getElementById("save_usr_data");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-/*var user = {
+var user = {
 	"firstName": "Yoshisaur",
 	"lastName": "Munchakoopas",
 	"email": "yoshi@saur.com",
 	"password": "123abc",
 	"photo": "../assets/images/yoshi.jpg"
-}*/
+}
 
-var user = null;
+//var user = null;
 
 // When the user clicks on the button, open the modal
 regBtn.onclick = function() {
@@ -55,6 +55,14 @@ function validateForm() {
     	alert("Mismatched passwords!");
     }    
     console.log(user);
+}
+
+function logout() {
+	user = null;
+	var usr_data = document.getElementById("usr_data");
+	usr_data.style.display = "none";
+	var loginBar = document.getElementById("login");
+	loginBar.style.display = "block";
 }
 
 if (user === null) {
