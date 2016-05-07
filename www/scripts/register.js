@@ -9,13 +9,13 @@ var save = document.getElementById("save_usr_data");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-var user = {
+/*var user = {
 	"firstName": "Yoshisaur",
 	"lastName": "Munchakoopas",
 	"email": "yoshi@saur.com",
 	"password": "123abc",
 	"photo": "../assets/images/yoshi.jpg"
-}
+}*/
 
 //var user = null;
 
@@ -36,7 +36,7 @@ window.onclick = function(event) {
     }
 }
 
-function validateForm() {
+/*function validateForm() {
     var firstName = document.forms["register"]["usr_first_name"].value;
     var lastName = document.forms["register"]["usr_last_name"].value;
     var email = document.forms["register"]["usr_email"].value;
@@ -75,4 +75,4 @@ if (user === null) {
 	usrImg.src = user.photo;
 	var usrName = document.getElementById("usr_data_name");
 	usrName.innerHTML = user.firstName + " " + user.lastName;
-}
+}*/

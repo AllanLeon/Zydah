@@ -134,7 +134,6 @@
 	</article>
 </section>
 </div>
-<div ng-controller="registerController">
 <section id="login">
 	<form autocomplete="on">
 		<input class="text" type="email" placeholder="Email" name="usr_email">
@@ -149,13 +148,13 @@
 			<img id="usr_data_img" src="../assets/images/user_circle.png" />
 		</figure>
 		<h1 id="usr_data_name" class="text">Name</h1>
-		<input class="button" type="button" value="Log Out" ng-click="logout()">
+		<input class="button" type="button" value="Log Out" onclick="logout()">
 	</article>
 </section>
 <section id="register_modal" class="modal">
 	<div class="modal-content">
     <span class="close">x</span>
-	<form autocomplete="on" name="register">
+	<form autocomplete="on" name="register" onsubmit="return validateForm()">
 		<div class="reg_big">
 			<div class="reg_small">
 				<input type="text" placeholder="First Name" name="usr_first_name">
@@ -178,12 +177,11 @@
 			<span class="upload_bttn">Upload photo</span>
 		</div>
 		<div class="reg_bttn">
-			<input type="button" value="Register" ng-click="registerUser()">
+			<input type="submit" value="Register">
 		</div>
 	</form>
 	</div>
 </section>
-</div>
 <script type="text/javascript" src="../scripts/register.js"></script>
 <script type="text/javascript" src="../scripts/app.js"></script>
 <script type="text/javascript">
