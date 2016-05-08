@@ -151,16 +151,16 @@
 	</article>-->
 </section>
 </div>
-<div>
-<section id="login">
+<div ng-controller="bottomBarController">
+<section id="login" ng-hide="userIsLogged">
 	<form autocomplete="on">
-		<input class="text" type="email" placeholder="Email" name="usr_email" ng-model="login_email">
-		<input class="text" type="password" placeholder="Password" name="usr_pwd" ng-model="login_pswd">
-		<input id="login_button" type="submit" value="Login">
-		<input id="register_button" type="button" value="Register">
+		<input class="text" type="email" placeholder="Email" name="login_email" ng-model="login.email">
+		<input class="text" type="password" placeholder="Password" name="login_pwd" ng-model="login.password">
+		<input id="login_button" type="button" value="Login" ng-click="login()">
+		<input id="register_button" type="button" value="Register" ng-click="showRegister()">
 	</form>
 </section>
-<section id="usr_data" ng-controller="userDataController" ng-show="userIsLogged">
+<section id="usr_data" ng-show="userIsLogged">
 	<article>
 		<figure class="text">
 			<img id="usr_data_img" ng-src="{{ user.photo }}" alt="User photo"/>
@@ -169,9 +169,9 @@
 		<input class="button" type="button" value="Log Out" ng-click="logout()">
 	</article>
 </section>
-<section id="register_modal" class="modal" ng-controller="registerController" ng-show="registerIsShowing">
+<section id="register_modal" class="modal" ng-show="registerIsShowing">
 	<div class="modal-content">
-    <span class="close">x</span>
+    <span class="close" ng-click="hideRegister()">x</span>
 	<form autocomplete="on" name="register">
 		<div class="reg_big">
 			<div class="reg_small">
@@ -201,13 +201,11 @@
 	</div>
 </section>
 </div>
-<script type="text/javascript" src="../scripts/modal.js"></script>
 <script type="text/javascript" src="../scripts/app.js"></script>
 <script type="text/javascript" src="../scripts/main.js"></script>
 <script type="text/javascript" src="../scripts/search.js"></script>
 <script type="text/javascript" src="../scripts/videos.js"></script>
-<script type="text/javascript" src="../scripts/register.js"></script>
-<script type="text/javascript" src="../scripts/userData.js"></script>
+<script type="text/javascript" src="../scripts/bottomBar.js"></script>
 <script type="text/javascript">
 	var search_btn = document.getElementById('search_btn');
 	search_btn.onclick = function() {
