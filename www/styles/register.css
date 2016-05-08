@@ -1,6 +1,6 @@
 #register_modal {
 	width: 100%;
-	display: none;
+	display: block;
 }
 
 #register_modal form {
