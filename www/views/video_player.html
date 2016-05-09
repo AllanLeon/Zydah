@@ -9,6 +9,7 @@
 </head>
 <body ng-app="zydah">
 <section id="search" ng-controller="searchController">
+	<div>
 	<figure>
 	<a href="../index.html">
 		<img ng-src="{{ zydahSmall }}" alt="Zydah"/>
@@ -29,6 +30,7 @@
 		<input type="button" value="Filters" class="filters_bttn" ng-click="toggleFilters()">
 		<input type="search" placeholder="Search..." name="searchquery" id="search_box" ng-model="searchQuery">
 		<input type="image" src="../assets/images/search_icon.png" alt="Search" class="search_bttn" ng-click="search()">
+	</div>
 	</div>
 </section>
 <section id="video" ng-controller="videoplayerController">
