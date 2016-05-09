@@ -55,16 +55,16 @@ body {
 
 .tulbux #logo {
 	-webkit-transform: translate(-335px, -116px) scale(0.25, 0.25);
-	-moz-transform: scale(0.6, 0.6) translate(-100px, -430px);
-	-o-transform: scale(0.6, 0.6) translate(-100px, -430px);
-	-ms-transform: scale(0.6, 0.6) translate(-100px, -430px);
+	-moz-transform: translate(-100px, -430px) scale(0.6, 0.6);
+	-o-transform: translate(-100px, -430px) scale(0.6, 0.6);
+	-ms-transform: translate(-100px, -430px) scale(0.6, 0.6);
 }
 
 .tulbux #search_form {
 	-webkit-transform: translate(-60px, -260px) scale(0.6, 0.6);
-	-moz-transform: scale(0.6, 0.6) translate(-100px, -430px);
-	-o-transform: scale(0.6, 0.6) translate(-100px, -430px);
-	-ms-transform: scale(0.6, 0.6) translate(-100px, -430px);
+	-moz-transform: translate(-100px, -430px) scale(0.6, 0.6);
+	-o-transform: translate(-100px, -430px) scale(0.6, 0.6);
+	-ms-transform: translate(-100px, -430px) scale(0.6, 0.6);
 }
 
 .tulbux #videos {
