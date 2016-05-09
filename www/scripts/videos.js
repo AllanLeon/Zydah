@@ -6,7 +6,7 @@ app.controller('videosController', function($scope){
 			'rating': 150,
 			'tags': ['2','3','4'],
 			'img': '',
-			'url': 'video_player.html'
+			'url': '/views/video_player.html'
 		},
 		{
 			'title': 'Video 2',
@@ -14,7 +14,15 @@ app.controller('videosController', function($scope){
 			'rating': 10,
 			'tags': ['1'],
 			'img': '',
-			'url': 'video_player.html'
+			'url': '/views/video_player.html'
+		},
+		{
+			'title': 'Video 3',
+			'duration': 519,
+			'rating': 12,
+			'tags': ['1','6'],
+			'img': '',
+			'url': '/views/video_player.html'
 		},
 		{
 			'title': '',
@@ -22,7 +30,7 @@ app.controller('videosController', function($scope){
 			'rating': 0,
 			'tags': [],
 			'img': '',
-			'url': 'video_player.html'
+			'url': '/views/video_player.html'
 		}
 	];
 

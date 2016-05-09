@@ -1,4 +1,5 @@
 app.controller('searchController', function($scope){
+	$scope.zydahSmall = '../assets/images/zydah_small.png';
 	$scope.filtersAreShowing = false;
 	$scope.searchQuery = '';
 	$scope.searchFilters = {

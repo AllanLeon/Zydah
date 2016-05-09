@@ -9,10 +9,9 @@
 </head>
 <body ng-app="zydah">
 <section id="search" ng-controller="searchController">
-	<div>
 	<figure>
-	<a href="index.html">
-		<img src="../assets/images/zydah_small.png" alt="Zydah"/>
+	<a href="../index.html">
+		<img ng-src="{{ zydahSmall }}" alt="Zydah"/>
 	</a>
 	</figure>
 	<div id="search_form">
@@ -31,23 +30,22 @@
 		<input type="search" placeholder="Search..." name="searchquery" id="search_box" ng-model="searchQuery">
 		<input type="image" src="../assets/images/search_icon.png" alt="Search" class="search_bttn" ng-click="search()">
 	</div>
-	</div>
 </section>
-<section id="video">
+<section id="video" ng-controller="videoplayerController">
 	<video controls>
-		 <source src="../assets/videos/love.mp4" type="video/mp4">
+		 <source ng-src="{{ demoVideoURL }}" type="video/mp4">
 		 Your browser does not support the video tag.
 	</video>
 	<div class="video_info">
 		<div class="video_text">
-			<h2>Title</h2><br>
-			<h4>Description</h4><br>
+			<h2>Title</h2><br/>
+			<h4>Description</h4><br/>
 			<h5>Tags</h5>
 		</div>
 		<div class="video_rating">
-			<input type="button" name="plus" value="^">
-			<h3>Rating</h3>
-			<input type="button" name="minus" value="v">
+			<input type="button" name="plus" value="^" ng-click="plus1()">
+			<h3>{{ rating }}</h3>
+			<input type="button" name="minus" value="v" ng-click="minus1()">
 		</div>
 	</div>
 </section>
@@ -121,7 +119,8 @@
 </div>
 <script type="text/javascript" src="../scripts/app.js"></script>
 <script type="text/javascript" src="../scripts/search.js"></script>
-<script type="text/javascript" src="../scripts/videos.js"></script>
+<script type="text/javascript" src="../scripts/search.js"></script>
+<script type="text/javascript" src="../scripts/videoplayer.js"></script>
 <script type="text/javascript" src="../scripts/bottomBar.js"></script>
 </body>
 </html>
