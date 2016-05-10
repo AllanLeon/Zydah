@@ -166,10 +166,6 @@ video {
 	padding: 0;
 }
 
-#comments textarea {
-	font: 14px "Roboto";
-}
-
 .comment {
 	width: 100%;
 	float: left;
@@ -196,8 +192,28 @@ video {
 	height: 70px;
 }
 
+.comment .usr_text span {
+	font: 16px "Roboto";
+}
+
+.new_comment {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+.new_comment textarea {
+	height: 50px;
+	width: 70%;
+	vertical-align: middle;
+	font: 14px "Roboto";
+	border-radius: 10px;
+	resize: none;
+}
+
 .comment_bttn {
 	border-radius: 10px;
+	vertical-align: middle;
 	border: 3px solid #ffffff;
 	height: 40px;
 	width: 100px;
@@ -205,14 +221,9 @@ video {
 	background-color: #2a2a2a;
 	background-color: #00B26F;
 	color: #FFFFFF;
-	margin-bottom: 20px;
 }
 
 .comment_bttn:hover {
 	background-color: #FFFFFF;
 	color: #00B26F;
-}
-
-.comment .usr_text span {
-	font: 16px "Roboto";
 }
