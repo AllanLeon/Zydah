@@ -40,8 +40,11 @@ app.controller('videoplayerController', function($scope){
 		}
 	];
 
+	$scope.newComment = {}
+
 	$scope.plus1 = plus1;
 	$scope.minus1 = minus1;
+	$scope.saveComment = saveComment;
 
 	function plus1() {
 		$scope.video.rating++;
@@ -51,5 +54,12 @@ app.controller('videoplayerController', function($scope){
 		if ($scope.rating != 0) {
 			$scope.video.rating--;
 		}
+	}
+
+	function saveComment() {
+		$scope.newComment.name = "Yoshisaur Munchakoopas";
+		$scope.newComment.img = "../assets/images/yoshi.jpg";
+		$scope.video.comments.push($scope.newComment);
+		$scope.newComment = {};
 	}
 });

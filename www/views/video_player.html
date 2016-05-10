@@ -55,8 +55,8 @@
 <hr>
 <section id="comments">
 	<div class="new_comment">
-		<textarea></textarea>
-		<input type="button" value="Comment" class="comment_bttn">
+		<textarea ng-model="newComment.text"></textarea>
+		<input type="button" value="Comment" class="comment_bttn" ng-click="saveComment()">
 	</div>
 	<header><h1>Comments</h1></header>
 	<article ng-repeat="commentData in video.comments">
