@@ -157,6 +157,7 @@ video {
 #comments h1 {
 	margin: 0;
     font: bold 28px "Roboto";
+    margin-bottom: 10px;
 }
 
 #comments h3 {
@@ -171,19 +172,20 @@ video {
 
 .comment {
 	width: 100%;
+	float: left;
 	/*background-color: green;*/
 }
 
 .comment .usr_img {
 	width: 70px;
-	height: 100px;
+	height: 70px;
 	float: left;
-	padding-right: 10px;
+	padding-right: 0px;
 	/*background-color: red;*/
 }
 
 .comment .usr_img img {
-	width: 70px;
+	width: 50px;
 }
 
 .comment .usr_img figure {
@@ -194,23 +196,23 @@ video {
 	height: 70px;
 }
 
-.comment .usr_text textarea {
-	width: 60%;
-	border-radius: 4px;
-}
-
 .comment_bttn {
 	border-radius: 10px;
 	border: 3px solid #ffffff;
-	height: 100%;
-	width: 40%;
+	height: 40px;
+	width: 100px;
 	font: 18px "Roboto";
 	background-color: #2a2a2a;
 	background-color: #00B26F;
 	color: #FFFFFF;
+	margin-bottom: 20px;
 }
 
 .comment_bttn:hover {
 	background-color: #FFFFFF;
 	color: #00B26F;
+}
+
+.comment .usr_text span {
+	font: 16px "Roboto";
 }
