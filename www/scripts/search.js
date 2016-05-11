@@ -1,4 +1,4 @@
-app.controller('searchController', function($scope){
+app.controller('searchController', function($scope, $location){
 	$scope.zydahSmall = '../assets/images/zydah_small.png';
 	$scope.filtersAreShowing = false;
 	$scope.searchQuery = '';
@@ -21,6 +21,6 @@ app.controller('searchController', function($scope){
 	}
 
 	function search() {
-		
+		$location.path('/search/' + $scope.searchQuery);
 	}
 });

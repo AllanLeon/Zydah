@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zydah by SEKs</title>
+	<link rel="icon" type="image/ico" href="../assets/images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../styles/search_results.css"/>
+	<link rel="stylesheet" type="text/css" href="../styles/bottom_bar.css"/>
+	<script type="text/javascript" src="../lib/angular.min.js"></script>
+</head>
+<body ng-app="zydah">
+<section id="videos" ng-controller="videosController">
+<div ng-repeat="video in videos" ng-click="showVideo(video.url)">
+	<article class="video_info">
+		<div class="video_thumbnail">
+			<h3 class="video_title">{{ video.title }}</h3><br>
+			<h4 class="video_duration">{{ secondsToMinSec(video.duration) }}</h4><br>
+		</div>
+		<div class="video_bottom_info">
+			<h5 class="video_rating">{{ video.rating }}</h5>
+			<h5 class="video_tags">
+				<span ng-repeat="tag in video.tags">{{ tag }} </span>
+			</h5>
+		</div>
+	</article>
+</div>
+</section>
+<script type="text/javascript" src="../scripts/app.js"></script>
+<script type="text/javascript" src="../scripts/search.js"></script>
+<script type="text/javascript" src="../scripts/videos.js"></script>
+<script type="text/javascript" src="../scripts/bottomBar.js"></script>
+</body>
+</html>

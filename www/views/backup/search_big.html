@@ -1,0 +1,19 @@
+<section id="logo">
+	<figure>
+	<a href="index.html">
+		<img ng-src="assets/images/zydah_calypse.png" alt="Zydah" />
+	</a>
+	</figure>
+</section>
+<section id="search" ng-controller="searchController">
+	<div id="search_form">
+		<div id="filters" ng-show="filtersAreShowing">
+			<div ng-repeat="filter in searchFilters.genres">
+				<input type="checkbox" ng-model=filter.value>{{ filter.name }}<br>
+			</div>
+		</div>
+		<input type="button" value="Filters" class="filters_bttn" ng-click="toggleFilters()">
+		<input type="search" placeholder="Search..." name="searchquery" id="search_box" ng-model="searchQuery">
+		<input type="image" src="assets/images/search_icon.png" alt="Search" class="search_bttn" id="search_btn" ng-click="search()">
+	</div>
+</section>

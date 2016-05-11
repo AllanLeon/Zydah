@@ -1,58 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Zydah</title>
-	<link rel="icon" type="image/ico" href="../assets/images/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="../styles/bottom_bar.css">
-</head>
-<body>
-<section id="login">
+<footer>
+<section id="login" ng-hide="userIsLogged">
 	<form autocomplete="on">
-		<input class="text" type="email" placeholder="Email" name="usr_email">
-		<input class="text" type="password" placeholder="Password" name="usr_pwd">
-		<input id="login_button" type="submit" value="Login">
-		<input id="register_button" type="button" value="Register">
+		<input class="text" type="email" placeholder="Email" name="login_email" ng-model="login.email">
+		<input class="text" type="password" placeholder="Password" name="login_pwd" ng-model="login.password">
+		<input id="login_button" type="button" value="Login" ng-click="login()">
+		<input id="register_button" type="button" value="Register" ng-click="showRegister()">
 	</form>
 </section>
-<section id="usr_data">
+<section id="usr_data" ng-show="userIsLogged">
 	<article>
 		<figure class="text">
-			<img src="../assets/images/user_circle.png" />
+			<img id="usr_data_img" ng-src="{{ user.photo }}" alt="User photo"/>
 		</figure>
-		<h1 class="text">Name</h1>
-		<input class="button" type="button" value="Log Out">
+		<h1 id="usr_data_name" class="text">{{ user.firstName + ' ' + user.lastName }}</h1>
+		<input class="button" type="button" value="Log Out" ng-click="logout()">
 	</article>
 </section>
-<section id="register_modal" class="modal">
+<section id="register_modal" class="modal" ng-show="registerIsShowing">
 	<div class="modal-content">
-    <span class="close">x</span>
-	<form autocomplete="on">
+    <span class="close" ng-click="hideRegister()">x</span>
+	<form autocomplete="on" name="register">
 		<div class="reg_big">
 			<div class="reg_small">
-				<input type="text" placeholder="First Name" name="usr_first_name">
+				<input type="text" placeholder="First Name" name="usr_first_name" ng-model="newUser.firstName">
 			</div>
 			<div class="reg_small">
-				<input type="text" placeholder="Last Name" name="usr_last_name"><br>
+				<input type="text" placeholder="Last Name" name="usr_last_name" ng-model="newUser.Lastname"><br>
 			</div>
 		</div>
 		<div class="reg_big">
-			<input type="email" placeholder="Email" name="usr_email"><br>
+			<input type="email" placeholder="Email" name="usr_email" ng-model="newUser.email"><br>
 		</div>
 		<div class="reg_big">
-			<input type="password" placeholder="Password" name="usr_password"><br>
+			<input type="password" placeholder="Password" name="usr_password" ng-model="newUser.password"><br>
 		</div>
 		<div class="reg_big">
-			<input type="password" placeholder="Repeat password" name="usr_password_rep"><br>
+			<input type="password" placeholder="Repeat password" name="usr_password_rep" ng-model="newUser.password_rep"><br>
 		</div>
 		<div class="reg_upload">
-			<input type="file" name="usr_img" accept="image/*" class="upload"><br>
+			<input type="file" name="usr_img" accept="image/*" class="upload" ng-model="newUser.photo"><br>
 			<span class="upload_bttn">Upload photo</span>
 		</div>
 		<div class="reg_bttn">
-			<input type="submit" value="Register" id="save_usr_data">
+			<input type="button" value="Register" ng-click="registerUser()">
 		</div>
 	</form>
 	</div>
 </section>
-</body>
-</html>
+</footer>

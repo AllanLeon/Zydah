@@ -1,6 +1,7 @@
 app.controller("bottomBarController", function($scope) {
 	$scope.userIsLogged = false;
 	$scope.user = {};
+	$scope.newUser = {};
 	$scope.registerIsShowing = false;
 
 	$scope.showRegister = showRegister;
