@@ -1,0 +1,74 @@
+{
+    "video": {
+        'title': 'A Love Story.',
+        'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+        'tags': ['comedy', 'romance'],
+        'rating': 9001,
+        'url': '../assets/videos/love.mp4'
+    },
+    "videos": {
+        {
+            'title': 'I QUIT FOR A NEW JOB! - HTC Vive 04',
+            'description': 'HTC VIve once again!',
+            'tags': ['simulator', 'VR', 'cooking'],
+            'rating': 222864,
+            'id': 'e7Ru2x4qHlI'
+        },
+        {
+            'title': 'BEST GAME 2016!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - Bear Simulator',
+            'description': 'Bear Simulator, such a beautiful game...',
+            'tags': ['simulator', 'bear', '2016'],
+            'rating': 136928,
+            'id': 'hbVUF5b307s'
+        },
+        {
+            'title': 'NASA HIRE ME!!! (Scrap Mechanic)',
+            'description': 'Scrap Mechanic=Better then minecraft?',
+            'tags': ['nasa', scrap', 'mechanic'],
+            'rating': 168482,
+            'id': 'NrvfFmpdcG0'
+        },
+        {
+            'title': 'MAKING FLAWLESS BRIDGES! // Bridge Constructor',
+            'description': 'Making bridges is my life. Its what I do, its what I breathe. Its what I eat.',
+            'tags': ['bridge', 'constructor', 'builder'],
+            'rating': 159131,
+            'id': 'prt1bk2B-gs'
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 9001,
+            'id': '../assets/videos/love.mp4'
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 9001,
+            'id': '../assets/videos/love.mp4'
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 9001,
+            'id': '../assets/videos/love.mp4'
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 9001,
+            'id': '../assets/videos/love.mp4'
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 9001,
+            'id': '../assets/videos/love.mp4'
+        },
+    }
+}
