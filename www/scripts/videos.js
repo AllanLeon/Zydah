@@ -1,4 +1,4 @@
-app.controller('videosController', function($scope, $location){
+app.controller('videosController', function($scope, $location, $routeParams, filterFilter){
 	$scope.videos = [
 		{
 			'title': 'Video 1',
@@ -225,6 +225,10 @@ app.controller('videosController', function($scope, $location){
 			'url': '/views/video_player.html'
 		}
 	];
+
+	if ($routeParams.query != "") {
+		$scope.videos = filterFilter($scope.videos, {'title': $routeParams.query})
+	}
 
 	$scope.secondsToMinSec = secondsToMinSec;
 	$scope.showVideo = showVideo;
