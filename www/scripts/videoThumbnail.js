@@ -12,7 +12,7 @@ app.directive('videoThumbnail', function() {
 		'<div class="video_bottom_info">' +
 			'<h5 class="video_rating">{{ video.rating }}</h5>' +
 			'<h5 class="video_tags">' +
-				'<span ng-repeat="tag in video.tags">{{ tag }} </span>' +
+				'<span ng-repeat="tag in video.tags">{{ tag }}{{$last ? "" : ","}}</span>' +
 			'</h5>' +
 		'</div>' +
 	'</article>',
