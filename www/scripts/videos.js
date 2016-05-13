@@ -76,7 +76,7 @@ app.controller('videosController', function($scope, $location, $routeParams, fil
             'title': 'A Love Story.',
             'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
             'tags': ['comedy', 'romance'],
-            'rating': 9001,
+            'rating': 231236,
             'duration': 38,
             'id': 'hHOt7eEzbxo'
         }

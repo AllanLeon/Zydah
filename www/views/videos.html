@@ -1,6 +1,6 @@
 <section id="videos">
-<div ng-repeat="video in videos" ng-click="showVideo(video.id)">
-	<article class="video_info">
+<div ng-repeat="video in videos | orderBy: '-rating'" ng-click="showVideo(video.id)">
+	<!--<article class="video_info">
 		<div class="video_thumbnail" style="background-image: url(assets/images/thumbnails/{{ video.id }}.jpg);">
 			<h3 class="video_title">{{ video.title }}</h3><br>
 			<h4 class="video_duration">{{ secondsToMinSec(video.duration) }}</h4><br>
@@ -11,6 +11,7 @@
 				<span ng-repeat="tag in video.tags">{{ tag }} </span>
 			</h5>
 		</div>
-	</article>
+	</article>-->
+	<video-thumbnail video="video"></video-thumbnail>
 </div>
 </section>
