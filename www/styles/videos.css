@@ -15,6 +15,7 @@
 	float: left;
 	display: table-cell;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 .video_info:hover {
