@@ -13,6 +13,7 @@
             "description": "HTC VIve once again!",
             "tags": ["simulator", "VR", "cooking"],
             "rating": 222864,
+            "duration": 123,
             "id": "e7Ru2x4qHlI"
         },
         {
@@ -20,6 +21,7 @@
             "description": "Bear Simulator, such a beautiful game...",
             "tags": ["simulator", "bear", "2016"],
             "rating": 136928,
+            "duration": 678,
             "id": "hbVUF5b307s"
         },
         {
@@ -27,6 +29,7 @@
             "description": "Scrap Mechanic=Better then minecraft?",
             "tags": ["nasa", "scrap", "mechanic"],
             "rating": 168482,
+            "duration": 324,
             "id": "NrvfFmpdcG0"
         },
         {
@@ -34,6 +37,7 @@
             "description": "Making bridges is my life. Its what I do, its what I breathe. Its what I eat.",
             "tags": ["bridge", "constructor", "builder"],
             "rating": 159131,
+            "duration": 1372,
             "id": "prt1bk2B-gs"
         },
         {
@@ -41,6 +45,7 @@
             "description": "Professor Pimp: http:/www.twitch.tv/bradwoto",
             "tags": ["japan", "world", "cup"],
             "rating": 138269,
+            "duration": 434,
             "id": "bngSPcW8zcI"
         },
         {
@@ -48,6 +53,7 @@
             "description": "Dont touch my balls please",
             "tags": ["gmod"],
             "rating": 105309,
+            "duration": 964,
             "id": "vValtBioF0I"
         },
         {
@@ -55,6 +61,7 @@
             "description": "Boogeyman vs. Five Nights at Freddys?",
             "tags": ["boogeyman"],
             "rating": 169268,
+            "duration": 712,
             "id": "C8o6udnHNlw"
         },
         {
@@ -62,6 +69,7 @@
             "description": "Please: Respect each other in the comments.",
             "tags": ["probably", "archery"],
             "rating": 187691,
+            "duration": 983,
             "id": "9TyU2gIRgtI"
         },
         {
@@ -69,6 +77,7 @@
             "description": "WATCH ALL EPISODES: youtube.com/watch?v=vjqCs... LIKE A BRO!",
             "tags": ["GTA", "stealing", "jets", "online"],
             "rating": 147790,
+            "duration": 123,
             "id": "B1Fdg8VVTec"
         }
     ]

@@ -1,7 +1,7 @@
 <section id="videos">
 <div ng-repeat="video in videos" ng-click="showVideo(video.title)">
 	<article class="video_info">
-		<div class="video_thumbnail">
+		<div class="video_thumbnail" style="background-image: url(assets/images/thumbnails/{{ video.id }}.jpg);">
 			<h3 class="video_title">{{ video.title }}</h3><br>
 			<h4 class="video_duration">{{ secondsToMinSec(video.duration) }}</h4><br>
 		</div>
