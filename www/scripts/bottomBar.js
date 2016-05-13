@@ -29,7 +29,7 @@ app.controller("bottomBarController", function($scope) {
 			"lastName": "Munchakoopas",
 			"email": $scope.login.email,
 			"password": $scope.login.password,
-			"photo": "../assets/images/yoshi.jpg"
+			"photo": "assets/images/yoshi.jpg"
 		}
 		$scope.userIsLogged = true;
 		$scope.login = {};
