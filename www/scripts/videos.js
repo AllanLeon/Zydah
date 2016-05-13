@@ -9,7 +9,7 @@ app.controller('videosController', function($scope, $location, $routeParams, fil
             "id": "e7Ru2x4qHlI"
         },
         {
-            "title": "BEST GAME 2016!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! - Bear Simulator",
+            "title": "BEST GAME 2016!!!!!!!!!!!!!!!!!!!!!!!!!!! - Bear Simulator",
             "description": "Bear Simulator, such a beautiful game...",
             "tags": ["simulator", "bear", "2016"],
             "rating": 136928,
