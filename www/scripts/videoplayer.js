@@ -7,7 +7,9 @@ app.controller('videoPlayerController', function($scope){
 		'url': 'assets/videos/love.mp4'
 	};
 
-	$scope.video.comments = [
+	$scope.video.comments = comments;
+
+	var comments = [
 		{
 			'name': 'A',
 			'img': 'assets/images/user_circle.png',
@@ -62,4 +64,10 @@ app.controller('videoPlayerController', function($scope){
 		$scope.video.comments.push($scope.newComment);
 		$scope.newComment = {};
 	}
+
+	$scope.$on("PlayVideo", function(event, video) {
+		$scope.video = video;
+		$scope.video.url = 'assets/videos/love.mp4';
+		$scope.video.comments = comments;
+	})
 });
