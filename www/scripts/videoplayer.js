@@ -7,9 +7,7 @@ app.controller('videoPlayerController', function($scope){
 		'url': 'assets/videos/love.mp4'
 	};
 
-	$scope.video.comments = comments;
-
-	var comments = [
+	$scope.video.comments = [
 		{
 			'name': 'A',
 			'img': 'assets/images/user_circle.png',

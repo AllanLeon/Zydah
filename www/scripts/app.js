@@ -1,4 +1,4 @@
-var app = angular.module('zydah', ['ngRoute']);
+var app = angular.module('zydah', ['ngRoute', 'clickOut']);
 
 app.config(function($routeProvider) {
 	$routeProvider

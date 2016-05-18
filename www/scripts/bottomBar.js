@@ -6,9 +6,12 @@ app.controller("bottomBarController", function($scope) {
 
 	$scope.showRegister = showRegister;
 	$scope.hideRegister = hideRegister;
+	$scope.modalOut = modalOut;
 	$scope.logout = logout;
 	$scope.login = login;
 	$scope.registerUser = registerUser;
+
+	var clicksOut = 0;
 
 	function showRegister() {
 		$scope.registerIsShowing = true;
@@ -16,6 +19,16 @@ app.controller("bottomBarController", function($scope) {
 
 	function hideRegister() {
 		$scope.registerIsShowing = false;
+		clicksOut = 0;
+	}
+
+	function modalOut() {
+		if ($scope.registerIsShowing) {
+			clicksOut++;
+			if (clicksOut > 1) {
+				$scope.hideRegister();
+			}
+		}
 	}
 
 	function logout() {
@@ -44,15 +57,6 @@ app.controller("bottomBarController", function($scope) {
 			$scope.hideRegister();
 	    } else {
 	    	alert("Mismatched passwords!");
-	    }
-	}
-
-
-
-	var modal = document.getElementById('register_modal');
-	window.onclick = function(event) {
-	    if (event.target == modal) {
-	        $scope.hideRegister();
 	    }
 	}
 });
