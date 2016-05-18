@@ -1,11 +1,13 @@
-app.controller('videoPlayerController', function($scope){
-	$scope.video = {
+app.controller('videoPlayerController', function($scope, PlayVideoService){
+	/*$scope.video = {
 		'title': 'A Love Story.',
 		'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
 		'tags': ['comedy', 'romance'],
 		'rating': 9001,
 		'url': 'assets/videos/love.mp4'
-	};
+	};*/
+	$scope.video = PlayVideoService.getVideo();
+	$scope.video.url = 'assets/videos/love.mp4';
 
 	$scope.video.comments = [
 		{
@@ -63,9 +65,9 @@ app.controller('videoPlayerController', function($scope){
 		$scope.newComment = {};
 	}
 
-	$scope.$on("PlayVideo", function(event, video) {
+	/*$scope.$on("PlayVideo", function(event, video) {
 		$scope.video = video;
 		$scope.video.url = 'assets/videos/love.mp4';
 		$scope.video.comments = comments;
-	})
+	})*/
 });

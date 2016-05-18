@@ -1,4 +1,4 @@
-app.controller('videosController', function($scope, $location, $routeParams, filterFilter, $rootScope) {
+app.controller('videosController', function($scope, $location, $routeParams, filterFilter, $rootScope, PlayVideoService) {
     $scope.videos = [
         {
             "title": "I QUIT FOR A NEW JOB! - HTC Vive 04",
@@ -96,7 +96,8 @@ app.controller('videosController', function($scope, $location, $routeParams, fil
 	}
 
 	function showVideo(video) {
+        PlayVideoService.setVideo(video);
 		$location.path('/video/' + video.id);
-        $rootScope.$broadcast("PlayVideo", video);
+        //$rootScope.$broadcast("PlayVideo", video);
 	}
 });
