@@ -1,14 +1,15 @@
-app.controller("bottomBarController", function($scope) {
-	$scope.userIsLogged = false;
-	$scope.user = {};
+app.controller("bottomBarController", function($scope, currentUser, $http, users) {
 	$scope.newUser = {};
+	$scope.login = {};
 	$scope.registerIsShowing = false;
+	$scope.userIsLogged = currentUser.isUserLogged();
+	$scope.user = currentUser.getLoggedUser();
 
 	$scope.showRegister = showRegister;
 	$scope.hideRegister = hideRegister;
 	$scope.modalOut = modalOut;
 	$scope.logout = logout;
-	$scope.login = login;
+	$scope.loginUser = loginUser;
 	$scope.registerUser = registerUser;
 
 	var clicksOut = 0;
@@ -32,12 +33,14 @@ app.controller("bottomBarController", function($scope) {
 	}
 
 	function logout() {
-		$scope.user = {};
-		$scope.userIsLogged = false;
+		/*$scope.user = {};
+		$scope.userIsLogged = false;*/
+		currentUser.logout();
+		updateUserData();
 	}
 
-	function login() {
-		$scope.user = {
+	function loginUser() {
+		/*$scope.user = {
 			"firstName": "Yoshisaur",
 			"lastName": "Munchakoopas",
 			"email": $scope.login.email,
@@ -45,18 +48,39 @@ app.controller("bottomBarController", function($scope) {
 			"photo": "assets/images/yoshi.jpg"
 		}
 		$scope.userIsLogged = true;
-		$scope.login = {};
+		$scope.login = {};*/
+		users.loginUser($scope.login)
+		.then(function(res) {
+    		currentUser.login(res.data);
+    		updateUserData();
+    		$scope.login = {};
+    	}, function(res) {
+    		alert(res);
+    	});
 	}
 
 	function registerUser() {    
 	    if ($scope.newUser.password === $scope.newUser.password_rep) {
-		    $scope.newUser.photo = "https://www.lapatilla.com/site/wp-content/uploads/2016/03-04/donald.jpg";
-	     	$scope.user = $scope.newUser;
-			$scope.userIsLogged = true;
-			$scope.newUser = {};
-			$scope.hideRegister();
+	    	if ($scope.newUser.photo.trim() === "") {
+	    		$scope.newUser.photo = "assets/images/user_circle.png";
+	    	}
+
+	    	users.createUser($scope.newUser)
+	    	.then(function(res) {
+	    		currentUser.login($scope.newUser);
+	    		updateUserData();
+	    		$scope.newUser = {};
+				$scope.hideRegister();
+	    	}, function(res) {
+	    		alert(res);
+	    	});
 	    } else {
 	    	alert("Mismatched passwords!");
 	    }
+	}
+
+	function updateUserData() {
+		$scope.userIsLogged = currentUser.isUserLogged();
+		$scope.user = currentUser.getLoggedUser();
 	}
 });

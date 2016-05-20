@@ -22,7 +22,7 @@ app.all('*', function(req, res, next) {
 });
 
 app.listen(process.env.PORT || 8080, function() {
-	console.log("Express server listening on port %d in $s mode", this.address().port, app.settings.env);
+	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 var Schema = mongoose.Schema;
@@ -122,6 +122,102 @@ video.save(function(err) {
 	}
 });*/
 
+/*var testVideos = [
+        {
+            "title": "I QUIT FOR A NEW JOB! - HTC Vive 04",
+            "description": "HTC VIve once again!",
+            "tags": ["simulator", "VR", "cooking"],
+            "rating": 222864,
+            "duration": 123,
+            "id": "e7Ru2x4qHlI"
+        },
+        {
+            "title": "BEST GAME 2016!!!!!!!!!!!!!!!!!!!!!!!!!!! - Bear Simulator",
+            "description": "Bear Simulator, such a beautiful game...",
+            "tags": ["simulator", "bear", "2016"],
+            "rating": 136928,
+            "duration": 678,
+            "id": "hbVUF5b307s"
+        },
+        {
+            "title": "NASA HIRE ME!!! (Scrap Mechanic)",
+            "description": "Scrap Mechanic=Better then minecraft?",
+            "tags": ["nasa", "scrap", "mechanic"],
+            "rating": 168482,
+            "duration": 324,
+            "id": "NrvfFmpdcG0"
+        },
+        {
+            "title": "MAKING FLAWLESS BRIDGES! || Bridge Constructor",
+            "description": "Making bridges is my life. Its what I do, its what I breathe. Its what I eat.",
+            "tags": ["bridge", "constructor", "builder"],
+            "rating": 159131,
+            "duration": 1372,
+            "id": "prt1bk2B-gs"
+        },
+        {
+            "title": "PIMPS 4 LYF (Japan World Cup #3)",
+            "description": "Professor Pimp: http:/www.twitch.tv/bradwoto",
+            "tags": ["japan", "world", "cup"],
+            "rating": 138269,
+            "duration": 434,
+            "id": "bngSPcW8zcI"
+        },
+        {
+            "title": "DONT TOUCH THE BALLS! (Gmod)",
+            "description": "Dont touch my balls please",
+            "tags": ["gmod"],
+            "rating": 105309,
+            "duration": 964,
+            "id": "vValtBioF0I"
+        },
+        {
+            "title": "BETTER THAN FIVE NIGHTS AT FREDDYS?! (Boogeyman)",
+            "description": "Boogeyman vs. Five Nights at Freddys?",
+            "tags": ["boogeyman"],
+            "rating": 169268,
+            "duration": 712,
+            "id": "C8o6udnHNlw"
+        },
+        {
+            "title": "DO YOU EVEN ARCHER BRO?! - Probably Archery",
+            "description": "Please: Respect each other in the comments.",
+            "tags": ["probably", "archery"],
+            "rating": 187691,
+            "duration": 983,
+            "id": "9TyU2gIRgtI"
+        },
+        {
+            "title": "STEALING JETS! (GTAV Funny Moments Online #2)",
+            "description": "WATCH ALL EPISODES: youtube.com/watch?v=vjqCs... LIKE A BRO!",
+            "tags": ["GTA", "stealing", "jets", "online"],
+            "rating": 147790,
+            "duration": 123,
+            "id": "B1Fdg8VVTec"
+        },
+        {
+            'title': 'A Love Story.',
+            'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
+            'tags': ['comedy', 'romance'],
+            'rating': 231236,
+            'duration': 38,
+            'id': 'hHOt7eEzbxo'
+        }
+    ];
+
+for (i = 0; i < testVideos.length; i++) {
+	testVideos[i].comments = [];
+	var video = new Videos(testVideos[i]);
+
+	video.save(function(err) {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log('Video saved');
+		}
+	});
+}*/
+
 app.get('/api/videos', function(req, res) {
 	Videos.find(function(err, videos) {
 		if (err) {
@@ -132,8 +228,22 @@ app.get('/api/videos', function(req, res) {
 	});
 });
 
-//TODO
-//Get all videos' tags for filters
+app.get('/api/tags', function(req, res) {
+	var tags = [];
+	Videos.find(function(err, videos) {
+		if (err) {
+			res.json(tags);
+		} else {
+			for (i = 0; i < videos.length; i++) {
+				tags = tags.concat(videos[i].tags);
+			}
+			tags = tags.filter(function(item, pos, self) {
+    			return self.indexOf(item) == pos;
+			});
+			res.json(tags);
+		}
+	});
+});
 
 app.get('/api/video', function(req, res) {
 	var query = {
@@ -155,14 +265,19 @@ app.get('/api/user', function(req, res) {
 	var query = {
 		'email': req.query.email
 	};
-	Users.find(query, function(err, users) {
+	Users.findOne(query, function(err, user) {
 		if (err) {
 			res.send(err);
-		} else if (users.length > 0) {
-			//res.json({'resp': true});
-			res.json(users);
 		} else {
-			res.json({'resp': false});
+			if (user) {
+				if (user.password === req.query.password) {
+					res.json(user);
+				} else {
+					res.send('Incorrect password!');
+				}
+			} else {
+				res.send('Incorrect email!');
+			}
 		}
 	});
 });
@@ -188,11 +303,19 @@ app.post('/api/video', function(req, res) {
 });
 
 app.post('/api/user', function(req, res) {
-	Users.create({req.query.user}, function(err) {
+	/*var newUser = new Users({
+		'firstName': req.query.firstName,
+		'lastName': req.query.lastName,
+		'email': req.query.email,
+		'password': req.query.password,
+		'photo': req.query.photo
+	});*/
+	console.log(req.body);
+	Users.create(req.body, function(err) {
 		if (err) {
-        	console.log(err);
+        	res.send(err);
     	} else {
-    		console.log('User successfully created! :D');
+    		res.json({'resp': true});
     	}
-	})
+	});
 });
