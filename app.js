@@ -44,7 +44,9 @@ var Videos = mongoose.model('videos', new Schema( {
 	'duration': Number,
 	'id': String,
 	'tags': [String],
-	'comments': Array
+	'comments': Array/*,
+	'likes': Array,
+	'dislikes': Array*/
 } ));
 
 var Users = mongoose.model('users', new Schema( {
@@ -55,7 +57,7 @@ var Users = mongoose.model('users', new Schema( {
 	'photo': String
 } ));
 
-var user = new Users({
+/*var user = new Users({
 	'firstName': 'test',
 	'lastName': 'prueba',
 	'email': 'a@b.c',
@@ -118,4 +120,46 @@ video.save(function(err) {
 	} else {
 		console.log('Firsssssst video! :D');
 	}
+});*/
+
+app.get('/api/videos', function(req, res) {
+	Videos.find(function(err, videos) {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(videos);
+		}
+	});
+});
+
+app.get('/api/video', function(req, res) {
+	var query = {
+		'id': req.query.id
+	};
+	Videos.find(query, function(err, videos) {
+		if (err) {
+			res.send(err);
+		} else if (videos.length > 0) {
+			//res.json({'resp': true});
+			res.json(videos);
+		} else {
+			res.json({'resp': false});
+		}
+	});
+});
+
+app.get('/api/user', function(req, res) {
+	var query = {
+		'email': req.query.email
+	};
+	Users.find(query, function(err, users) {
+		if (err) {
+			res.send(err);
+		} else if (users.length > 0) {
+			//res.json({'resp': true});
+			res.json(users);
+		} else {
+			res.json({'resp': false});
+		}
+	});
 });
