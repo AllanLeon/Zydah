@@ -132,6 +132,9 @@ app.get('/api/videos', function(req, res) {
 	});
 });
 
+//TODO
+//Get all videos' tags for filters
+
 app.get('/api/video', function(req, res) {
 	var query = {
 		'id': req.query.id
@@ -162,4 +165,34 @@ app.get('/api/user', function(req, res) {
 			res.json({'resp': false});
 		}
 	});
+});
+
+app.post('/api/video', function(req, res) {
+	var query = {
+		'id': req.query.id,
+		'rating': req.query.rating,
+		'newComment': req.query.newComment
+	};
+
+	Videos.update({'id': query.id}, {
+		'rating': query.rating,
+		'$push': {'comments': query.newComment}
+	}, {'safe': true, 'upsert': false},
+	    function(err, model) {
+    	if (err) {
+        	console.log(err);
+    	} else {
+    		console.log('Video successfully updated! :D');
+    	}
+    });
+});
+
+app.post('/api/user', function(req, res) {
+	Users.create({req.query.user}, function(err) {
+		if (err) {
+        	console.log(err);
+    	} else {
+    		console.log('User successfully created! :D');
+    	}
+	})
 });
