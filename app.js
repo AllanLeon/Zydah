@@ -188,7 +188,7 @@ app.post('/api/video', function(req, res) {
 });
 
 app.post('/api/user', function(req, res) {
-	Users.create({req.query.user}, function(err) {
+	Users.create(req.query.user, function(err) {
 		if (err) {
         	console.log(err);
     	} else {

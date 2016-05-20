@@ -1,4 +1,4 @@
-app.controller('videoPlayerController', function($scope, PlayVideoService){
+app.controller('videoPlayerController', function($scope, PlayVideoService, $sce, $routeParams){
 	/*$scope.video = {
 		'title': 'A Love Story.',
 		'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
@@ -7,7 +7,7 @@ app.controller('videoPlayerController', function($scope, PlayVideoService){
 		'url': 'assets/videos/love.mp4'
 	};*/
 	$scope.video = PlayVideoService.getVideo();
-	$scope.video.url = 'assets/videos/love.mp4';
+	$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $routeParams.id + '?autoplay=1');
 
 	$scope.video.comments = [
 		{
