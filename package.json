@@ -1,0 +1,30 @@
+{
+  "name": "zydah",
+  "version": "1.0.0",
+  "description": "Video streaming app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.12",
+    "method-override": "^2.1.2",
+    "body-parser": "^1.5.1",
+    "morgan": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanLeon/Zydah.git"
+  },
+  "keywords": [
+    "video"
+  ],
+  "author": "SEKs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllanLeon/Zydah/issues"
+  },
+  "homepage": "https://github.com/AllanLeon/Zydah#readme"
+}
