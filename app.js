@@ -22,7 +22,7 @@ app.all('*', function(req, res, next) {
 });
 
 app.listen(process.env.PORT || 8080, function() {
-	console.log("Express server listening on port %d in $s mode", this.address().port, app.settings.env);
+	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 var Schema = mongoose.Schema;
@@ -132,8 +132,22 @@ app.get('/api/videos', function(req, res) {
 	});
 });
 
-//TODO
-//Get all videos' tags for filters
+app.get('/api/tags', function(req, res) {
+	var tags = [];
+	Videos.find(function(err, videos) {
+		if (err) {
+			res.json(tags);
+		} else {
+			for (i = 0; i < videos.length; i++) {
+				tags = tags.concat(videos[i].tags);
+			}
+			tags = tags.filter(function(item, pos, self) {
+    			return self.indexOf(item) == pos;
+			});
+			res.json(tags);
+		}
+	});
+});
 
 app.get('/api/video', function(req, res) {
 	var query = {
@@ -188,7 +202,7 @@ app.post('/api/video', function(req, res) {
 });
 
 app.post('/api/user', function(req, res) {
-	Users.create({req.query.user}, function(err) {
+	Users.create(req.query.user, function(err) {
 		if (err) {
         	console.log(err);
     	} else {
