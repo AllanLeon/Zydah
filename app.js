@@ -303,6 +303,7 @@ app.post('/api/video', function(req, res) {
 });
 
 app.post('/api/user', function(req, res) {
+<<<<<<< HEAD
 	/*var newUser = new Users({
 		'firstName': req.query.firstName,
 		'lastName': req.query.lastName,
@@ -312,6 +313,9 @@ app.post('/api/user', function(req, res) {
 	});*/
 	console.log(req.body);
 	Users.create(req.body, function(err) {
+=======
+	Users.create(req.query.user, function(err) {
+>>>>>>> iframe
 		if (err) {
         	res.send(err);
     	} else {
