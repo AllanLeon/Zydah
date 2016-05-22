@@ -340,10 +340,9 @@ app.post('/api/video/newComment', function(req, res) {
 });*/
 
 app.post('/api/user', function(req, res) {
-	console.log(req.body);
 	Users.create(req.body, function(err) {
 		if (err) {
-        	res.send(err);
+        	res.status(404).send(err);
     	} else {
     		res.json({'resp': true});
     	}
