@@ -29,7 +29,6 @@ app.controller('videosController', function($scope, $location, $http, videos, fi
 	}
 
 	function showVideo(video) {
-        PlayVideoService.setVideo(video);
 		$location.path('/video/' + video.id);
         //$rootScope.$broadcast("PlayVideo", video);
 	}

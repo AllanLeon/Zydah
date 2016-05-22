@@ -1,4 +1,4 @@
-app.controller('videoPlayerController', function($scope, PlayVideoService, videos, $routeParams, currentUser, $sce){
+app.controller('videoPlayerController', function($scope, videos, $routeParams, currentUser, $sce){
 	/*$scope.video = {
 		'title': 'A Love Story.',
 		'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
