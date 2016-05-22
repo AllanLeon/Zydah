@@ -1,4 +1,4 @@
-app.controller('videoPlayerController', function($scope, PlayVideoService){
+app.controller('videoPlayerController', function($scope, PlayVideoService, videos, $routeParams, currentUser){
 	/*$scope.video = {
 		'title': 'A Love Story.',
 		'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
@@ -6,10 +6,17 @@ app.controller('videoPlayerController', function($scope, PlayVideoService){
 		'rating': 9001,
 		'url': 'assets/videos/love.mp4'
 	};*/
-	$scope.video = PlayVideoService.getVideo();
+	//$scope.video = PlayVideoService.getVideo();
+	$scope.video = {};
+	videos.getById($routeParams.id)
+	.then(function(res) {
+		$scope.video = res.data;
+	}, function(res) {
+		console.log(res);
+	});
 	$scope.video.url = 'assets/videos/love.mp4';
 
-	$scope.video.comments = [
+	/*$scope.video.comments = [
 		{
 			'name': 'A',
 			'img': 'assets/images/user_circle.png',
@@ -40,7 +47,7 @@ app.controller('videoPlayerController', function($scope, PlayVideoService){
 			'img': 'assets/images/user_circle.png',
 			'text': 'qwertglklm'
 		}
-	];
+	];*/
 
 	$scope.newComment = {}
 
@@ -49,20 +56,43 @@ app.controller('videoPlayerController', function($scope, PlayVideoService){
 	$scope.saveComment = saveComment;
 
 	function plus1() {
-		$scope.video.rating++;
+		var rating = $scope.video.rating + 1;
+		videos.updateRating($scope.video.id, rating)
+		.then(function(res) {
+			$scope.video.rating = rating;
+		}, function(res) {
+			console.log(res);
+		});
 	}
 
 	function minus1() {
-		if ($scope.rating != 0) {
-			$scope.video.rating--;
-		}
+		var rating = $scope.video.rating - 1;
+		videos.updateRating($scope.video.id, rating)
+		.then(function(res) {
+			$scope.video.rating = rating;
+		}, function(res) {
+			console.log(res);
+		});
 	}
 
 	function saveComment() {
-		$scope.newComment.name = "Yoshisaur Munchakoopas";
-		$scope.newComment.img = "assets/images/yoshi.jpg";
-		$scope.video.comments.push($scope.newComment);
-		$scope.newComment = {};
+		if (currentUser.isUserLogged()) {
+			if ($scope.newComment.text.trim() === '') {
+				alert('Write a comment before posting!');
+			} else {
+				$scope.newComment.name = currentUser.getName();
+				$scope.newComment.img = currentUser.getLoggedUser().photo;
+				videos.saveComment($scope.video.id, $scope.newComment)
+				.then(function(res) {
+					$scope.video.comments.push($scope.newComment);
+					$scope.newComment = {};
+				}, function(res) {
+					console.log(res);
+				});
+			}
+		} else {
+			alert('You must log in to comment!');
+		}
 	}
 
 	/*$scope.$on("PlayVideo", function(event, video) {

@@ -3,6 +3,8 @@ app.controller('videosController', function($scope, $location, $routeParams, fil
     $http.get('http://localhost:8080/api/videos')
     .then(function(res) {
         $scope.videos = res.data;
+    }, function(res) {
+    	console.log(res);
     });
 
 	if ($routeParams.query != "") {

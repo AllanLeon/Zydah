@@ -42,7 +42,10 @@ var Videos = mongoose.model('videos', new Schema( {
 	'description': String,
 	'rating': Number,
 	'duration': Number,
-	'id': String,
+	'id': {
+		'type': String,
+		'unique': true
+	},
 	'tags': [String],
 	'comments': Array/*,
 	'likes': Array,
@@ -52,12 +55,15 @@ var Videos = mongoose.model('videos', new Schema( {
 var Users = mongoose.model('users', new Schema( {
 	'firstName': String,
 	'lastName': String,
-	'email': String,
+	'email': {
+		'type': String,
+		'unique': true
+	},
 	'password': String,
 	'photo': String
 } ));
 
-/*var user = new Users({
+var user = new Users({
 	'firstName': 'test',
 	'lastName': 'prueba',
 	'email': 'a@b.c',
@@ -73,7 +79,7 @@ user.save(function(err) {
 	}
 });
 
-var video = new Videos({
+/*var video = new Videos({
     'title': 'A Love Story.',
     'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
     'rating': 231236,
@@ -122,7 +128,7 @@ video.save(function(err) {
 	}
 });*/
 
-/*var testVideos = [
+var testVideos = [
         {
             "title": "I QUIT FOR A NEW JOB! - HTC Vive 04",
             "description": "HTC VIve once again!",
@@ -216,7 +222,7 @@ for (i = 0; i < testVideos.length; i++) {
 			console.log('Video saved');
 		}
 	});
-}*/
+}
 
 app.get('/api/videos', function(req, res) {
 	Videos.find(function(err, videos) {
@@ -249,14 +255,11 @@ app.get('/api/video', function(req, res) {
 	var query = {
 		'id': req.query.id
 	};
-	Videos.find(query, function(err, videos) {
+	Videos.findOne(query, function(err, video) {
 		if (err) {
 			res.send(err);
-		} else if (videos.length > 0) {
-			//res.json({'resp': true});
-			res.json(videos);
 		} else {
-			res.json({'resp': false});
+			res.json(video);
 		}
 	});
 });
@@ -282,7 +285,41 @@ app.get('/api/user', function(req, res) {
 	});
 });
 
-app.post('/api/video', function(req, res) {
+app.post('/api/video/rating', function(req, res) {
+	var query = {
+		'id': req.body.id
+	};
+
+	Videos.update(query, {
+		'rating': req.body.rating
+	}, {'safe': true, 'upsert': false},
+	    function(err, model) {
+    	if (err) {
+        	res.send(err);
+    	} else {
+    		res.json({'resp': true});
+    	}
+    });
+});
+
+app.post('/api/video/newComment', function(req, res) {
+	var query = {
+		'id': req.body.id
+	};
+
+	Videos.update(query, {
+		'$push': {'comments': req.body.newComment}
+	}, {'safe': true, 'upsert': false},
+	    function(err, model) {
+    	if (err) {
+        	res.send(err);
+    	} else {
+    		res.json({'resp': true});
+    	}
+    });
+});
+
+/*app.post('/api/video', function(req, res) {
 	var query = {
 		'id': req.query.id,
 		'rating': req.query.rating,
@@ -300,18 +337,20 @@ app.post('/api/video', function(req, res) {
     		console.log('Video successfully updated! :D');
     	}
     });
-});
+});*/
 
 app.post('/api/user', function(req, res) {
-	/*var newUser = new Users({
-		'firstName': req.query.firstName,
-		'lastName': req.query.lastName,
-		'email': req.query.email,
-		'password': req.query.password,
-		'photo': req.query.photo
-	});*/
-	console.log(req.body);
+	/*console.log(req.body);
 	Users.create(req.body, function(err) {
+		if (err) {
+        	res.send(err);
+    	} else {
+    		res.json({'resp': true});
+    	}
+	});*/
+	var newUser = new Users(req.body);
+
+	newUser.save(function(err) {
 		if (err) {
         	res.send(err);
     	} else {

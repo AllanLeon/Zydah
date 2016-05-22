@@ -15,6 +15,9 @@ app.factory('currentUser', function() {
 		},
 		isUserLogged: function() {
 			return userIsLogged;
+		},
+		getName: function() {
+			return loggedUser.firstName + ' ' + loggedUser.lastName;
 		}
 	};
 
