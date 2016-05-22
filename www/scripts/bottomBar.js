@@ -72,7 +72,8 @@ app.controller("bottomBarController", function($scope, currentUser, $http, users
 	    		$scope.newUser = {};
 				$scope.hideRegister();
 	    	}, function(res) {
-	    		alert(res);
+	    		alert('That email is already registered!');
+    			console.log(res);
 	    	});
 	    } else {
 	    	alert("Mismatched passwords!");

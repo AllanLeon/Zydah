@@ -3,6 +3,11 @@ app.factory('videos', function($http) {
 		getAll: function() {
 			return $http.get('http://localhost:8080/api/videos');
 		},
+		getFiltered: function(filters) {
+			return $http.get('http://localhost:8080/api/videos/filter', {
+				'params': filters
+			});
+		},
 		getAllTags: function() {
 			return $http.get('http://localhost:8080/api/tags');
 		},

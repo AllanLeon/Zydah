@@ -323,6 +323,19 @@ app.get('/api/videos', function(req, res) {
 	});
 });
 
+app.get('/api/videos/filter', function(req, res) {
+	req.query.title = new RegExp(req.query.title, "i");
+	console.log(req.query);
+
+	Videos.find(req.query, function(err, videos) {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(videos);
+		}
+	});
+});
+
 app.get('/api/tags', function(req, res) {
 	var tags = [];
 	Videos.find(function(err, videos) {
@@ -429,10 +442,9 @@ app.post('/api/video/newComment', function(req, res) {
 });*/
 
 app.post('/api/user', function(req, res) {
-	console.log(req.body);
 	Users.create(req.body, function(err) {
 		if (err) {
-        	res.send(err);
+        	res.status(404).send(err);
     	} else {
     		res.json({'resp': true});
     	}
