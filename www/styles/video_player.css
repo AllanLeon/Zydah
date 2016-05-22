@@ -28,12 +28,14 @@ iframe {
 	float: left;
 	height: 100%;
 	display: table;
+    color: #FFF;
 	/*background-color: red;*/
 }
 
 .video_rating {
 	margin-left: 80%;
 	width: 20%;
+    color: #FFF;
 	/*background-color: green;*/
 }
 
@@ -61,6 +63,12 @@ iframe {
 .video_rating input {
 	margin: 0 auto;
 	display: block;
+    font: bold 22px "Roboto";
+	color: #00B26F;
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    outline:none;
 }
 
 #comments {
@@ -70,6 +78,7 @@ iframe {
 	padding-bottom: 10px;
     margin: 0 auto;
     display: table;
+    color: #FFF;
 }
 
 #comments h1 {

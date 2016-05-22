@@ -62,7 +62,7 @@ var Users = mongoose.model('users', new Schema( {
 	'password': String,
 	'photo': String
 } ));
-
+/*
 var user = new Users({
 	'firstName': 'test',
 	'lastName': 'prueba',
@@ -78,7 +78,7 @@ user.save(function(err) {
 		console.log('Firrrrrrst user! :D');
 	}
 });
-
+*/
 /*var video = new Videos({
     'title': 'A Love Story.',
     'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
@@ -127,7 +127,7 @@ video.save(function(err) {
 		console.log('Firsssssst video! :D');
 	}
 });*/
-
+/*
 var testVideos = [
         {
             "title": "I QUIT FOR A NEW JOB! - HTC Vive 04",
@@ -223,7 +223,7 @@ for (i = 0; i < testVideos.length; i++) {
 		}
 	});
 }
-
+*/
 app.get('/api/videos', function(req, res) {
 	Videos.find(function(err, videos) {
 		if (err) {
