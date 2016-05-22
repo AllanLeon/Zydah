@@ -27,7 +27,7 @@ app.listen(process.env.PORT || 8080, function() {
 
 var Schema = mongoose.Schema;
 
-var uristring = 'mongodb://localhost/ZydahDB';
+var uristring = 'mongodb://admin:admin@ds025232.mlab.com:25232/zydahdb';
 
 mongoose.connect(uristring, function(err, res) {
 	if (err) {
@@ -64,9 +64,9 @@ var Users = mongoose.model('users', new Schema( {
 } ));
 /*
 var user = new Users({
-	'firstName': 'test',
-	'lastName': 'prueba',
-	'email': 'a@b.c',
+	'firstName': 'Felix',
+	'lastName': 'Kjellberg',
+	'email': 'pew@die.pie',
 	'password': '123',
 	'photo': 'http://images.8tracks.com/cover/i/001/550/687/pewdiepie_is_fabulous__by_nylah22-d5w7exz-2234.jpg?rect=226,0,900,900&q=98&fm=jpg&fit=max'
 });
@@ -76,56 +76,6 @@ user.save(function(err) {
 		console.log(err);
 	} else {
 		console.log('Firrrrrrst user! :D');
-	}
-});
-*/
-/*
-var video = new Videos({
-    'title': 'A Love Story.',
-    'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
-    'rating': 231236,
-    'duration': 38,
-    'id': 'hHOt7eEzbxo',
-    'tags': ['comedy', 'romance'],
-    'comments': [
-		{
-			'name': 'A',
-			'img': 'assets/images/user_circle.png',
-			'text': 'first comment'
-		},
-		{
-			'name': 'b',
-			'img': 'assets/images/user_circle.png',
-			'text': 'wqert'
-		},
-		{
-			'name': 'wqertyujh',
-			'img': 'assets/images/user_circle.png',
-			'text': 'qwertghjhgvcxz'
-		},
-		{
-			'name': 'qqwq',
-			'img': 'assets/images/user_circle.png',
-			'text': 'rtyuiolkmnbv'
-		},
-		{
-			'name': 'poqe',
-			'img': 'assets/images/user_circle.png',
-			'text': 'wqerghfdsa'
-		},
-		{
-			'name': 'qwertyn',
-			'img': 'assets/images/user_circle.png',
-			'text': 'qwertglklm'
-		}
-	]
-});
-
-video.save(function(err) {
-	if (err) {
-		console.log(err);
-	} else {
-		console.log('Firsssssst video! :D');
 	}
 });
 
@@ -311,8 +261,8 @@ for (i = 0; i < testVideos.length; i++) {
 			console.log('Video saved');
 		}
 	});
-}
-*/
+}*/
+
 app.get('/api/videos', function(req, res) {
 	Videos.find(function(err, videos) {
 		if (err) {
