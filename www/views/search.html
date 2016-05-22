@@ -8,8 +8,8 @@
 	</figure>
 	<div id="search_form">
 		<div id="filters" ng-show="filtersAreShowing">
-			<div ng-repeat="filter in searchFilters">
-				<input type="checkbox" ng-model="filter.value" ng-change="search()">{{ filter.name }}<br>
+			<div ng-repeat="filter in searchFilters | limitTo: 50" class="filter">
+				<input type="checkbox" ng-model="filter.value" ng-change="search()">{{ filter.name }}
 			</div>
 		</div>
 		<input type="button" value="Filters" class="filters_bttn" ng-click="toggleFilters()">
