@@ -1,7 +1,7 @@
 app.factory('users', function($http) {
 	var myUser = {
 		loginUser: function(user) {
-			return $http.get('http://localhost:8080/api/user', {
+			return $http.get('/api/user', {
 				'params': {
 					'email': user.email,
 					'password': user.password
@@ -9,7 +9,7 @@ app.factory('users', function($http) {
 			});
 		},
 		createUser: function(user) {
-			return $http.post('http://localhost:8080/api/user', user);
+			return $http.post('/api/user', user);
 		}
 	}
 
