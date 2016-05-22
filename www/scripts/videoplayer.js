@@ -1,4 +1,4 @@
-app.controller('videoPlayerController', function($scope, PlayVideoService, videos, $routeParams, currentUser){
+app.controller('videoPlayerController', function($scope, PlayVideoService, videos, $routeParams, currentUser, $sce){
 	/*$scope.video = {
 		'title': 'A Love Story.',
 		'description': 'Falcon Fan realized broke up with his girlfriend Fedora Lover.',
@@ -14,7 +14,8 @@ app.controller('videoPlayerController', function($scope, PlayVideoService, video
 	}, function(res) {
 		console.log(res);
 	});
-	$scope.video.url = 'assets/videos/love.mp4';
+	//$scope.video.url = 'assets/videos/love.mp4';
+	$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $routeParams.id + '?autoplay=1');
 
 	/*$scope.video.comments = [
 		{
