@@ -1,9 +1,9 @@
-app.controller('searchController', function($scope, $location, $http, filters, $rootScope){
+app.controller('searchController', function($scope, $location, $http, filters, $rootScope, videos){
 	$scope.zydahSmall = '../assets/images/zydah_small.png';
 	$scope.filtersAreShowing = false;
 	$scope.searchQuery = '';
 	$scope.searchFilters = [];
-	$http.get('http://localhost:8080/api/tags')
+	videos.getAllTags()
 	.then(function(res) {
 		for (i = 0; i < res.data.length; i++) {
 			$scope.searchFilters.push({
