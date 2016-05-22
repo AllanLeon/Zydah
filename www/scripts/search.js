@@ -1,4 +1,4 @@
-app.controller('searchController', function($scope, $location, $http){
+app.controller('searchController', function($scope, $location, $http, filters, $rootScope){
 	$scope.zydahSmall = '../assets/images/zydah_small.png';
 	$scope.filtersAreShowing = false;
 	$scope.searchQuery = '';
@@ -31,18 +31,8 @@ app.controller('searchController', function($scope, $location, $http){
 	}
 
 	function search() {
-		$location.path('/search/' + $scope.searchQuery);
+		filters.setFilters($scope.searchQuery, $scope.searchFilters);
+		//$location.path('/search/' + $scope.searchQuery);
+		$rootScope.$broadcast('filterVideos');
 	}
-
-	/*funtion getAllFilters() {
-		$http.get('http://localhost:8080/api/tags')
-			.then(function(res) {
-				for (i = 0; i < res.length; i++) {
-					$scope.searchFilters.push({
-						'name': res[i],
-						'value': false
-					});
-				}
-			});
-	}*/
 });

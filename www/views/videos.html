@@ -1,5 +1,6 @@
 <section id="videos">
-<div ng-repeat="video in videos | orderBy: '-rating'" ng-click="showVideo(video)">
+<!--<div ng-repeat="video in videos | orderBy: '-rating' | filter: filterTitle | filter:filterTags" ng-click="showVideo(video)">-->
+<div ng-repeat="video in videos | orderBy: '-rating' | limitTo: 60" ng-click="showVideo(video)">
 	<video-thumbnail video="video"></video-thumbnail>
 </div>
 </section>

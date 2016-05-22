@@ -9,11 +9,11 @@
 	<div id="search_form">
 		<div id="filters" ng-show="filtersAreShowing">
 			<div ng-repeat="filter in searchFilters">
-				<input type="checkbox" ng-model=filter.value>{{ filter.name }}<br>
+				<input type="checkbox" ng-model="filter.value" ng-change="search()">{{ filter.name }}<br>
 			</div>
 		</div>
 		<input type="button" value="Filters" class="filters_bttn" ng-click="toggleFilters()">
-		<input type="search" placeholder="Search..." name="searchquery" id="search_box" ng-model="searchQuery">
+		<input type="search" placeholder="Search..." name="searchquery" id="search_box" ng-model="searchQuery" ng-change="search()">
 		<input type="image" src="assets/images/search_icon.png" alt="Search" class="search_bttn" ng-click="search()">
 	</div>
 	</div>

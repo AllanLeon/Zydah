@@ -234,6 +234,19 @@ app.get('/api/videos', function(req, res) {
 	});
 });
 
+app.get('/api/videos/filter', function(req, res) {
+	req.query.title = new RegExp(req.query.title, "i");
+	console.log(req.query);
+
+	Videos.find(req.query, function(err, videos) {
+		if (err) {
+			res.send(err);
+		} else {
+			res.json(videos);
+		}
+	});
+});
+
 app.get('/api/tags', function(req, res) {
 	var tags = [];
 	Videos.find(function(err, videos) {
