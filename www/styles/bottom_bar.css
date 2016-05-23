@@ -5,18 +5,14 @@
 	height: 60px;
 	position: fixed;
 	bottom: 0;
-	/*background-color: #90c7be;*/
 	background-color: rgba(33,33,33,0.9);
 	margin-left: -8px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display: table;
-	/*display: none;*/
 }
 
 #login form .text {
 	position: relative;
-	/*top: 100%;*/
-	/*transform: translateY(15%);*/
 	border-radius: 5px;
 	width: 30%;
 	margin: 5px 2% 0 2%;
@@ -29,10 +25,7 @@
 #register_button {
 	float: right;
 	position: relative;
-	/*top: 50%;*/
 	margin: 5px 0 0 0;
-	/*border-radius: 10px;*/
-	/*border: 2px solid #FFFFFF;*/
 	border: none;
 	font: bold 14px "Roboto";
 	color: #FFFFFF;
@@ -40,8 +33,6 @@
 	width: 100%;
 	display: table-cell;
 	background-color: #00B26F;
-	/*box-shadow: 2px 2px 5px black;*/
-	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 #register_button:hover {
@@ -51,8 +42,6 @@
 
 #login_button {
 	position: relative;
-	/*top: 50%;*/
-	/*float: left;*/
 	display: table-cell;
 	margin: 2px 2% 0 2%;
 	border-radius: 10px;
@@ -62,11 +51,6 @@
 	padding: 5px;
 	width: 20%;
 	background-color: #B6B6B6;
-	/*float: right;
-	position: relative;
-	top: 50%;
-	transform: translateY(50%);
-	margin-right: 20px;*/
 }
 
 #login_button:hover {
@@ -78,7 +62,6 @@
 	min-height: 40px;
 	width: 100%;
 	position: fixed;
-	/*top: 0;*/
 	bottom: 0;
 	background: linear-gradient(to right,#00E1B9, #00B26F); 
 	margin-left: -8px;
@@ -125,23 +108,20 @@
 }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 701px) {
 	
 #login form {
 	width: 100%;
 	min-height: 40px;
 	position: fixed;
 	bottom: 0;
-	/*background-color: #90c7be;*/
 	background-color: rgba(33,33,33,0.9);
 	margin-left: -8px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	/*display: none;*/
 }
 
 #login form .text {
 	position: relative;
-	/*top: 100%;*/
 	transform: translateY(15%);
 	margin-left: 10px;
 	border-radius: 5px;
@@ -164,7 +144,6 @@
 	padding: 5px;
 	width: 140px;
 	background-color: #00B26F;
-	/*box-shadow: 2px 2px 5px black;*/
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -185,11 +164,6 @@
 	padding: 5px;
 	width: 140px;
 	background-color: #B6B6B6;
-	/*float: right;
-	position: relative;
-	top: 50%;
-	transform: translateY(50%);
-	margin-right: 20px;*/
 }
 
 #login_button:hover {
@@ -201,7 +175,6 @@
 	min-height: 40px;
 	width: 100%;
 	position: fixed;
-	/*top: 0;*/
 	bottom: 0;
 	background: linear-gradient(to right,#00E1B9, #00B26F); 
 	margin-left: -8px;
