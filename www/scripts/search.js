@@ -12,16 +12,6 @@ app.controller('searchController', function($scope, $location, $http, filters, $
 			});
 		}
 	});
-	/*$scope.searchFilters = {
-		'genres': [
-			{ 'name': 'Action', 'value': false },
-			{ 'name': 'Comedy', 'value': false },
-			{ 'name': 'Drama', 'value': false },
-			{ 'name': 'Fantasy', 'value': false },
-			{ 'name': 'Horror', 'value': false },
-			{ 'name': 'Romance', 'value': false }
-		]
-	};*/
 
 	$scope.toggleFilters = toggleFilters;
 	$scope.search = search;
@@ -32,7 +22,7 @@ app.controller('searchController', function($scope, $location, $http, filters, $
 
 	function search() {
 		filters.setFilters($scope.searchQuery, $scope.searchFilters);
-		//$location.path('/search/' + $scope.searchQuery);
 		$rootScope.$broadcast('filterVideos');
+		$location.path('/');
 	}
 });

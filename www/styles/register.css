@@ -4,59 +4,46 @@
 }
 
 #register_modal form {
-	background-color: #d9d9d9;
-	margin: 0 auto;
-	max-width: 600px;
+	/*background-color: #d9d9d9;*/
+	/*margin: 0 auto;*/
+	/*max-width: 600px;*/
 	width: 100%;
-	height: 250px;
-	padding: 5px;
+	/*height: 250px;*/
+	/*padding: 5px;*/
 }
 
 .reg_big {
-	width: 100% - 10px;
-	height: 30px;
-	padding: 5px;
-}
-
-.reg_big input {
-	border-radius: 4px;
-	border: 3px solid #ffffff;
-	height: 80%;
-	width: 95%;
-	font: 18px "Roboto";
-}
-
-.reg_small {
-	float: left;
-	width: 45%;
-	height: 30px;
-	padding-right: 10px;
-}
-
-.reg_small input {
-	border-radius: 4px;
-	border: 3px solid #ffffff;
-	height: 80%;
 	width: 100%;
+	height: 35	px;
+	padding: 5px;
+	border-radius: 4px;
+	border: 3px solid #ffffff;
+    box-sizing: border-box;
 	font: 18px "Roboto";
+	margin-bottom: 3px;
 }
 
 .reg_bttn {
-	width: 40%;
+	/*width: 40%;*/
 	height: 35px;
 	padding: 5px;
-}
-
-.reg_bttn input {
+	width: 100%;
 	border-radius: 4px;
 	border: 3px solid #ffffff;
-	height: 100%;
+	font: 18px "Roboto";
+	background-color: #00B26F;
+}
+
+/*.reg_bttn {
+	border-radius: 4px;
+	border: 3px solid #ffffff;
+	/*height: 100%;
 	width: 100%;
 	font: 18px "Roboto";
 	background-color: #a2a2a2;
-}
+}*/
 
-.reg_bttn input:hover {
+.reg_bttn:hover {
 	background-color: #ffffff;
 }
 
@@ -96,13 +83,13 @@
     background-color: red;
 }*/
 
-.reg_upload {
+/*.reg_upload {
 	position: relative;
 	overflow: hidden;
     /*border:solid 1px gray;
     border-radius: 5px;*/
     /*width: 40%;
-	height: 35px;*/
+	height: 35px;
 	width: 40%;
 	padding: 5px;
 	height: 35px;
@@ -119,7 +106,7 @@
     border:solid 1px gray;
     border-radius: 5px;
     font: 18px "Roboto";
-    /*padding: 0 10px;*/
+    /*padding: 0 10px;
     height: 35px;
     width: 100%;
     line-height:35px;
@@ -143,7 +130,7 @@
 	cursor: pointer;
 	opacity: 0;
 	filter: alpha(opacity=0);
-}
+}*/
 
 .modal {
     display: block; /* Hidden by default */
@@ -160,12 +147,13 @@
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
-    min-width: 500px;
+    /*background-color: #fefefe;*/
+    background-color: #d9d9d9;
+    margin: 100px auto; /* 15% from the top and centered */
+    padding: 5px;
+    /*border: 1px solid #888;*/
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
 }
 
 /* The Close Button */
