@@ -1,6 +1,6 @@
 app.controller('videoPlayerController', function($scope, videos, $routeParams, currentUser, $sce){
 	$scope.video = {};
-	$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $routeParams.id + '?autoplay=1');
+	$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $routeParams.id + '?autoplay=1&;showinfo=0&;iv_load_policy=3&;rel=0;color=white');
 	$scope.newComment = {};	
 
 	$scope.plus1 = plus1;
