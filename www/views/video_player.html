@@ -25,7 +25,7 @@
 		<input type="button" value="Comment" class="comment_bttn" ng-click="saveComment()">
 	</div>
 	<h1>Comments</h1>
-	<article ng-repeat="commentData in video.comments">
+	<!--<article ng-repeat="commentData in video.comments">
 		<div class="comment">
 			<div class="usr_img">
 				<figure>
@@ -37,6 +37,7 @@
 				<span>{{ commentData.text }}</span><br>
 			</div>
 		</div>
-	</article>
+	</article>-->
+	<video-comment ng-repeat="comment in video.comments" comment-data="comment"></video-comment>
 </section>
 </div>
