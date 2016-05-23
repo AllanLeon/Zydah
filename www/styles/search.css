@@ -21,7 +21,6 @@
 
 #search figure {
 	position: fixed;
-	display: table;
 	/*border-bottom: 1px solid #00e1b9;*/
 	height: 35px;
 	top: 0;
