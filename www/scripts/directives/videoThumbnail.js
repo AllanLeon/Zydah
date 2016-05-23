@@ -4,8 +4,8 @@ app.directive('videoThumbnail', function() {
 		scope: {
 			video: "="
 		},
-		template:
-		'<article class="video_thumbnail">' +
+		templateUrl: 'views/video_thumbnail.html'
+		/*'<article class="video_thumbnail">' +
 			'<div class="videot_img" style="background-image: url(assets/images/thumbnails/{{ video.id }}.jpg);">' +
 				'<h3 class="videot_title">{{ video.title }}</h3><br>' +
 				'<h4 class="videot_duration">{{ secondsToMinSec(video.duration) }}</h4><br>' +
@@ -16,6 +16,6 @@ app.directive('videoThumbnail', function() {
 					'<span ng-repeat="tag in video.tags">{{ tag }}{{$last ? "" : ","}}</span>' +
 				'</h5>' +
 			'</div>' +
-		'</article>'
+		'</article>'*/
 	}
 });

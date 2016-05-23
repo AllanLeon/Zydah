@@ -4,8 +4,8 @@ app.directive('videoComment', function() {
 		scope: {
 			commentData: "="
 		},
-		template:
-		'<article>' +
+		templateUrl: 'views/video_comment.html'
+		/*'<article>' +
 			'<div class="comment">' +
 				'<div class="usr_img">' +
 					'<figure>' +
@@ -17,6 +17,6 @@ app.directive('videoComment', function() {
 					'<span>{{ commentData.text }}</span><br>' +
 				'</div>' +
 			'</div>' +
-		'</article>'
+		'</article>'*/
 	}
 });
