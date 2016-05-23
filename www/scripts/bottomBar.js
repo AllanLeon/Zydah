@@ -33,22 +33,11 @@ app.controller("bottomBarController", function($scope, currentUser, $http, users
 	}
 
 	function logout() {
-		/*$scope.user = {};
-		$scope.userIsLogged = false;*/
 		currentUser.logout();
 		updateUserData();
 	}
 
 	function loginUser() {
-		/*$scope.user = {
-			"firstName": "Yoshisaur",
-			"lastName": "Munchakoopas",
-			"email": $scope.login.email,
-			"password": $scope.login.password,
-			"photo": "assets/images/yoshi.jpg"
-		}
-		$scope.userIsLogged = true;
-		$scope.login = {};*/
 		users.loginUser($scope.login)
 		.then(function(res) {
     		currentUser.login(res.data);

@@ -5,18 +5,5 @@ app.directive('videoComment', function() {
 			commentData: "="
 		},
 		templateUrl: 'views/video_comment.html'
-		/*'<article>' +
-			'<div class="comment">' +
-				'<div class="usr_img">' +
-					'<figure>' +
-						'<img ng-src="{{ commentData.img }}" alt="{{ commentData.name }}"/>' +
-					'</figure>' +
-				'</div>' +
-				'<div class="usr_text">' +
-					'<h3>{{ commentData.name }}</h3>' +
-					'<span>{{ commentData.text }}</span><br>' +
-				'</div>' +
-			'</div>' +
-		'</article>'*/
 	}
 });
