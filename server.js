@@ -322,16 +322,16 @@ app.get('/api/user', function(req, res) {
 	};
 	Users.findOne(query, function(err, user) {
 		if (err) {
-			res.send(err);
+			res.status(404).send(err);
 		} else {
 			if (user) {
 				if (user.password === req.query.password) {
 					res.json(user);
 				} else {
-					res.send('Incorrect password!');
+					res.status(404).send('Incorrect password!');
 				}
 			} else {
-				res.send('Incorrect email!');
+				res.status(404).send('Incorrect email!');
 			}
 		}
 	});
