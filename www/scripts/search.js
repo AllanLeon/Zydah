@@ -23,5 +23,6 @@ app.controller('searchController', function($scope, $location, $http, filters, $
 	function search() {
 		filters.setFilters($scope.searchQuery, $scope.searchFilters);
 		$rootScope.$broadcast('filterVideos');
+		$location.path('/');
 	}
 });
