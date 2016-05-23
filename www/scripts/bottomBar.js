@@ -44,7 +44,7 @@ app.controller("bottomBarController", function($scope, currentUser, $http, users
     		updateUserData();
     		$scope.login = {};
     	}, function(res) {
-    		alert('Invalid email and/or password!');
+    		alert('Invalid email or password!');
     		console.log(res);
     	});
 	}
