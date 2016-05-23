@@ -1,6 +1,6 @@
 app.controller('videoPlayerController', function($scope, videos, $routeParams, currentUser, $sce){
 	$scope.video = {};
-	$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $routeParams.id + '?autoplay=1&;showinfo=0&;iv_load_policy=3&;rel=0;color=white');
+	setVideoUrl($routeParams.id);
 	$scope.newComment = {};	
 
 	$scope.plus1 = plus1;
@@ -10,6 +10,7 @@ app.controller('videoPlayerController', function($scope, videos, $routeParams, c
 	videos.getById($routeParams.id)
 	.then(function(res) {
 		$scope.video = res.data;
+		setVideoUrl($scope.video.id);
 	}, function(res) {
 		console.log(res);
 	});
@@ -52,5 +53,9 @@ app.controller('videoPlayerController', function($scope, videos, $routeParams, c
 		} else {
 			alert('You must log in to comment!');
 		}
+	}
+
+	function setVideoUrl(url) {
+		$scope.video.url = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + url + '?autoplay=1&;showinfo=0&;iv_load_policy=3&;rel=0;color=white');
 	}
 });

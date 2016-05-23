@@ -3,6 +3,10 @@ app.controller('searchController', function($scope, $location, $http, filters, $
 	$scope.filtersAreShowing = false;
 	$scope.searchQuery = '';
 	$scope.searchFilters = [];
+
+	$scope.toggleFilters = toggleFilters;
+	$scope.search = search;
+
 	videos.getAllTags()
 	.then(function(res) {
 		for (i = 0; i < res.data.length; i++) {
@@ -12,9 +16,6 @@ app.controller('searchController', function($scope, $location, $http, filters, $
 			});
 		}
 	});
-
-	$scope.toggleFilters = toggleFilters;
-	$scope.search = search;
 
 	function toggleFilters() {
 		$scope.filtersAreShowing = !$scope.filtersAreShowing;
