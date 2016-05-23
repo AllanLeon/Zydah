@@ -16,34 +16,20 @@
 	<script type="text/javascript" src="lib/angular-clickout.min.js"></script>
 </head>
 <body ng-app="zydah">
-<!--<div id="tulbux">-->
 <div ng-include="'views/search.html'" ng-controller="searchController"></div>
 <div ng-view></div>
-<!--</div>-->
 <div ng-include="'views/bottom_bar.html'"></div>
 
 <script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/search.js"></script>
-<script type="text/javascript" src="scripts/videos.js"></script>
-<script type="text/javascript" src="scripts/videoPlayer.js"></script>
-<script type="text/javascript" src="scripts/currentUser.js"></script>
-<script type="text/javascript" src="scripts/usersFactory.js"></script>
-<script type="text/javascript" src="scripts/videosFactory.js"></script>
-<script type="text/javascript" src="scripts/filters.js"></script>
-<script type="text/javascript" src="scripts/bottomBar.js"></script>
+<script type="text/javascript" src="scripts/controllers/search.js"></script>
+<script type="text/javascript" src="scripts/controllers/videos.js"></script>
+<script type="text/javascript" src="scripts/controllers/videoPlayer.js"></script>
+<script type="text/javascript" src="scripts/controllers/bottomBar.js"></script>
+<script type="text/javascript" src="scripts/factories/currentUser.js"></script>
+<script type="text/javascript" src="scripts/factories/usersFactory.js"></script>
+<script type="text/javascript" src="scripts/factories/videosFactory.js"></script>
+<script type="text/javascript" src="scripts/factories/filters.js"></script>
 <script type="text/javascript" src="scripts/directives/videoThumbnail.js"></script>
 <script type="text/javascript" src="scripts/directives/videoComment.js"></script>
-
-<script type="text/javascript">/*
-	var search_btn = document.getElementById('search_btn');
-	search_btn.onclick = function() {
-		document.getElementById('tulbux').className ='tulbux';
-		setTimeout(swipe, 870);
-	}
-
-	function swipe() {
-		window.location="views/search_results.html";
-	}*/
-</script>
 </body>
 </html>
